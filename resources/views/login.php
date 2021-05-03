@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        body{
+        body {
             background-color: #171717;
             color: white;
             text-align: center;
         }
-        input{
+        
+        input {
             color: #917839;
         }
-        ::placeholder {
+        
+         ::placeholder {
             color: #917839;
-            opacity: 0.5; 
+            opacity: 0.5;
         }
-        a{
+        
+        a {
             text-decoration: none;
             color: white;
             background-color: #917839;
         }
-        h1{
-            /* PONERLO TODO ALINEADO */
-        }
-        section{
+        
+        section {
             background-color: #917839;
             width: 20%;
             padding-bottom: 20px;
@@ -35,9 +37,10 @@
         }
     </style>
 </head>
+
 <body>
 
-    <h1>Royal <img src="img/logo.png" width="150px" height="150px"> Dice</h1>
+    <h1>Royal <img src="../../public/img/logo.png"> Dice</h1>
     <section>
         <h3>Iniciar sesión</h3>
         <input type="text" placeholder="Usuario">
@@ -45,7 +48,8 @@
         <input type="password" name="" id="" placeholder="Constraseña">
         <!-- <hr width="10px"> O <hr width="10px">      -->
     </section>
-   <br><br>
-   <a href="">Registrarse</a>
+    <br><br>
+    <a href="">Registrarse</a>
 </body>
+
 </html>
