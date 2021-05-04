@@ -35,11 +35,18 @@
             margin: auto;
             border-radius: 20px;
         }
+        .logo {
+            width: auto;
+            align-items: center
+        }
     </style>
 </head>
 
 <body>
-    <h1>Royal <img src="{{ asset('img/logo.png')}}"> Dice</h1>
+    <div class="logo">
+        <h1>Royal <img src="{{ asset('img/logo.png')}}"> Dice</h1>
+    </div>
+    
     <section>
         <h3>Iniciar sesión</h3>
         <input type="text" placeholder="Usuario">
