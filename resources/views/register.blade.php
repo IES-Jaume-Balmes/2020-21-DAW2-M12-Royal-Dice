@@ -14,10 +14,11 @@ include_once "registro.php";*/
 <body>
     <img src="{{ asset('img/logo.png')}}" id="logo">
 
-    <form class="box registro" action="" method="post">
+    <form class="box registro" method="post">
+        @csrf
         <h3>Registro</h3>
         <input type="text" name="usuario" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="contrasena" placeholder="Password">
         <input type="submit" name="enviar" value="Registrate">
         <p>Ya tienes cuenta?</p><a href="../public">Inicia sesión</a>
     </form>

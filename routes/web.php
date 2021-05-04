@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RegistrationController;
 
 
 /*
@@ -16,6 +16,15 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', HomeController::class);
+/*Route::get('/', HomeController::class);*/
 
-Route::get('register', RegisterController::class);
+/*Route::get('register', RegisterController::class);*/
+
+Route::get('/', [RegistrationController::class, 'create']);
+Route::post('/', function(){
+    return request()->only('usuario', 'contrasena');
+});
+
+Route::get('/login', 'SessionsController@create');
+Route::post('/login', 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');
