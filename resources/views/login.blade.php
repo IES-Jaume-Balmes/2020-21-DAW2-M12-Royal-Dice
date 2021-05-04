@@ -39,7 +39,6 @@
 </head>
 
 <body>
-    <?php $image  = public_path() . './img/logo.png'; // destination path ?>
     <h1>Royal <img src="{{ asset('img/logo.png')}}"> Dice</h1>
     <section>
         <h3>Iniciar sesión</h3>
