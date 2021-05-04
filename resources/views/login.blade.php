@@ -11,7 +11,7 @@
     <img src="{{ asset('img/logo.png')}}" id="logo">
 
     <form class="box" action="index.html" method="post">
-        <h2>Login</h2>
+        <h3>Login</h3>
         <input type="text" name="" placeholder="Username">
         <input type="password" name="" placeholder="Password">
         <input type="submit" name="" value="Login">
