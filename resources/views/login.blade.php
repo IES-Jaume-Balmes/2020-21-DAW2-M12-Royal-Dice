@@ -15,7 +15,7 @@
         <input type="text" name="" placeholder="Username">
         <input type="password" name="" placeholder="Password">
         <input type="submit" name="" value="Login">
-        <a href="">Registrarse</a>
+        <a href="./register">Registrarse</a>
     </form>
 
 
