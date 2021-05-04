@@ -65,10 +65,12 @@ body {
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .box input[type="submit"]:hover {
     background: white;
+    color: #c49d3c;
 }
 
 ::placeholder {
@@ -77,6 +79,7 @@ body {
 }
 
 #logo {
+    padding-top: 10px;
     height: 260px;
     width: 242px;
     display: block;
