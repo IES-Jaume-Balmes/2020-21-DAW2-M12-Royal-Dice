@@ -12,9 +12,9 @@
 
     <form class="box" action="index.html" method="post">
         <h3>Login</h3>
-        <input type="text" name="" placeholder="Username">
-        <input type="password" name="" placeholder="Password">
-        <input type="submit" name="" value="Login">
+        <input type="text" name="usuario" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" name="enviar" value="Login">
         <a href="./register">Registrarse</a>
     </form>
 
