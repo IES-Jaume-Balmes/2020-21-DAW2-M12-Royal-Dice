@@ -11,10 +11,10 @@
     <img src="{{ asset('img/logo.png')}}" id="logo">
 
     <form class="box" action="index.html" method="post">
-        <h2>Login</h2>
-        <input type="text" name="" placeholder="Username">
-        <input type="password" name="" placeholder="Password">
-        <input type="submit" name="" value="Login">
+        <h3>Login</h3>
+        <input type="text" name="usuario" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" name="enviar" value="Login">
         <a href="./register">Registrarse</a>
     </form>
 
