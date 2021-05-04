@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegistrationController;
-
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +22,12 @@ use App\Http\Controllers\RegistrationController;
 
 Route::get('/', [RegistrationController::class, 'create']);
 Route::post('/', function(){
-    return request()->only('usuario', 'contrasena');
+    $credentials = request()->only('usuario', 'contrasena');
+
+    if(Auth::attempt($credentials)){
+        return 'Sesión iniciada !!!!';
+    };
+    return 'Algo salió mal:/';
 });
 
 Route::get('/login', 'SessionsController@create');
