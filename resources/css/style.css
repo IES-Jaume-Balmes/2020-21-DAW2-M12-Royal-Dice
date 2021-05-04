@@ -12,7 +12,10 @@ body {
 
 .box {
     width: 300px;
-    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 27px;
+    padding-right: 27px;
     margin-left: auto;
     margin-right: auto;
     background: #917839;
