@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Register</title>
-    <link rel="stylesheet" href="{{ asset('../resources/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('/css/style.css')}}">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         <input type="text" name="user" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <input type="submit" name="enviar">
-        <p>Ya tienes cuenta?</p><a href="../public/login.blade.php">Inicia sesión</a>
+        <p>¿Ya tienes cuenta?</p><a href="./login">Inicia sesión</a>
     </form>
 
 

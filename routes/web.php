@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\SessionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +21,9 @@ use Illuminate\Support\Facades\Auth;
 
 /*Route::get('register', RegisterController::class);*/
 
-Route::get('/', [RegistrationController::class, 'create']);
+Route::get('register', [RegistrationController::class, 'create']);
 Route::post('register', [RegistrationController::class, 'store'])->name('register.store');
 
-Route::get('/login', 'SessionsController@create');
-Route::post('/login', 'SessionsController@store');
-Route::get('/logout', 'SessionsController@destroy');
+Route::get('login', [SessionsController::class, 'create']);
+Route::post('login', 'SessionsController@store');
+Route::get('logout', 'SessionsController@destroy');

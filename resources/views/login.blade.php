@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" href="{{ asset('../resources/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('/css/style.css')}}">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <input type="text" name="usuario" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <input type="submit" name="enviar" value="Login">
-        <a href="./register">Registrarse</a>
+        <p>¿Eres nuevo? </p><a href="../register">Registrate</a>
     </form>
 
 
