@@ -21,14 +21,7 @@ use Illuminate\Support\Facades\Auth;
 /*Route::get('register', RegisterController::class);*/
 
 Route::get('/', [RegistrationController::class, 'create']);
-Route::post('/', function(){
-    $credentials = request()->only('usuario', 'contrasena');
-
-    if(Auth::attempt($credentials)){
-        return 'Sesión iniciada !!!!';
-    };
-    return 'Algo salió mal:/';
-});
+Route::post('register', [RegistrationController::class, 'store'])->name('register.store');
 
 Route::get('/login', 'SessionsController@create');
 Route::post('/login', 'SessionsController@store');

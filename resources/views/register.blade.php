@@ -1,7 +1,3 @@
-<?php 
-/*session_start();
-include_once "registro.php";*/
-?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -13,13 +9,13 @@ include_once "registro.php";*/
 
 <body>
     <img src="{{ asset('img/logo.png')}}" id="logo">
-
-    <form class="box registro" method="post">
+    
+    <form class="box registro" method="post" action="{{ route('register.store') }}">
         @csrf
         <h3>Registro</h3>
-        <input type="text" name="usuario" placeholder="Username">
-        <input type="password" name="contrasena" placeholder="Password">
-        <input type="submit" name="enviar" value="Registrate">
+        <input type="text" name="user" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" name="enviar">
         <p>Ya tienes cuenta?</p><a href="../public/login.blade.php">Inicia sesión</a>
     </form>
 
