@@ -20,7 +20,7 @@ include_once "registro.php";*/
         <input type="text" name="usuario" placeholder="Username">
         <input type="password" name="contrasena" placeholder="Password">
         <input type="submit" name="enviar" value="Registrate">
-        <p>Ya tienes cuenta?</p><a href="../public">Inicia sesión</a>
+        <p>Ya tienes cuenta?</p><a href="../public/login.blade.php">Inicia sesión</a>
     </form>
 
 
