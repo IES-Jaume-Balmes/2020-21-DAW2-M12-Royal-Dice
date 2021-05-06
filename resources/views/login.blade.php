@@ -15,7 +15,7 @@
         <input type="text" name="usuario" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <input type="submit" name="enviar" value="Login">
-        <p>¿Eres nuevo? </p><a href="../register">Registrate</a>
+        <p>¿Eres nuevo? </p><a href="../public/register">Registrate</a>
     </form>
 
 

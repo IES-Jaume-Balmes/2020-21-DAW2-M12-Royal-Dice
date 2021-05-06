@@ -23,6 +23,8 @@ use App\Http\Controllers\SessionsController;
 
 Route::get('register', [RegistrationController::class, 'create']);
 Route::post('register', [RegistrationController::class, 'store'])->name('register.store');
+Route::get('registro', [RegistrationController::class, 'show']);
+
 
 Route::get('login', [SessionsController::class, 'create']);
 Route::post('login', 'SessionsController@store');

@@ -20,6 +20,11 @@ class RegistrationController extends Controller
         
 
         $usuario->save();
-        return 'Usuario registrado!';
+        return view('registro');
+    }
+    public function show($id){
+        $usuario = usuario::find($id);
+
+        return view('registro');
     }
 }
