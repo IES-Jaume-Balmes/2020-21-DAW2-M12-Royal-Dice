@@ -10,11 +10,12 @@
 <body>
     <img src="{{ asset('img/logo.png')}}" id="logo">
 
-    <form class="box" action="index.html" method="post">
+    <form class="box" method="post" action="{{ route('login.main') }} "">
+        @csrf
         <h3>Login</h3>
-        <input type="text" name="usuario" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" name="enviar" value="Login">
+        <input type="text" name="user" placeholder="Usuario">
+        <input type="password" name="password" placeholder="Contraseña">
+        <input type="submit" name="enviar">
         <p>¿Eres nuevo? </p><a href="../public/register">Registrate</a>
     </form>
 

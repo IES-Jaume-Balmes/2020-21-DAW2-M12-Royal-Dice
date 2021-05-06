@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\usuario;
 use Illuminate\Http\Request;
+use Symfony\Contracts\Service\Attribute\Required;
+use App\Http\Requests\StoreUsuari;
 
 class RegistrationController extends Controller
 {
@@ -12,7 +14,8 @@ class RegistrationController extends Controller
     {
         return view('register');
     }
-    public function store(Request $request){
+    public function store(StoreUsuari $request){
+
         $usuario = new usuario();
 
         $usuario->user = $request->user;

@@ -27,5 +27,5 @@ Route::get('registro', [RegistrationController::class, 'show']);
 
 
 Route::get('login', [SessionsController::class, 'create']);
-Route::post('login', 'SessionsController@store');
+Route::post('login', [SessionsController::class, 'authenticate'])->name('login.main');
 Route::get('logout', 'SessionsController@destroy');
