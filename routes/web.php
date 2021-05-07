@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\RegistrationController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,15 +17,12 @@ use App\Http\Controllers\SessionsController;
 |
 */
 
-/*Route::get('/', HomeController::class);*/
-
-/*Route::get('register', RegisterController::class);*/
+Route::get('/', function () {
+    return view('login');
+});
 
 Route::get('register', [RegistrationController::class, 'create']);
 Route::post('register', [RegistrationController::class, 'store'])->name('register.store');
-Route::get('registro', [RegistrationController::class, 'show']);
-
 
 Route::get('login', [SessionsController::class, 'create']);
 Route::post('login', [SessionsController::class, 'authenticate'])->name('login.main');
-Route::get('logout', 'SessionsController@destroy');

@@ -13,8 +13,14 @@
     <form class="box registro" method="post" action="{{ route('register.store') }}">
         @csrf
         <h3>Registro</h3>
-        <input type="text" name="user" placeholder="Usuario" value="{{ old('user') }}">
-        @error('user')
+        <input type="text" name="name" placeholder="Usuario" value="{{ old('user') }}">
+        @error('name')
+            
+            <small>*{{ $message }}</small>
+            <br>
+        @enderror
+        <input type="text" name="email" placeholder="email" value="{{ old('email') }}">
+        @error('email')
             
             <small>*{{ $message }}</small>
             <br>
@@ -28,10 +34,6 @@
         <input type="submit" name="enviar">
         <p>¿Ya tienes cuenta?</p><a href="./login">Inicia sesión</a>
     </form>
-
-
-
-
 </body>
 
 </html>

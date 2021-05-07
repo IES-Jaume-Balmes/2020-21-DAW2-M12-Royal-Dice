@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\usuario;
 use Illuminate\Http\Request;
 use Symfony\Contracts\Service\Attribute\Required;
-use App\Http\Requests\StoreUsuari;
 
 class RegistrationController extends Controller
 {
@@ -14,20 +12,21 @@ class RegistrationController extends Controller
     {
         return view('register');
     }
-    public function store(StoreUsuari $request){
+    public function store(Request $request){
 
-        $usuario = new usuario();
+        $usuario = new User();
 
-        $usuario->user = $request->user;
+        $usuario->name = $request->name;
+        $usuario->email = $request->email;
         $usuario->password = $request->password;
         
 
         $usuario->save();
-        return view('registro');
+        return view('login');
     }
     public function show($id){
-        $usuario = usuario::find($id);
+        $usuario = User::find($id);
 
-        return view('registro');
+        return view('login');
     }
 }
