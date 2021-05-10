@@ -1,4 +1,4 @@
-# ROYAL DICE 🎲
+#🎲 ROYAL DICE 🎲
 
 ## Casino Online
 
