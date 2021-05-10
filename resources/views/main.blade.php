@@ -55,15 +55,6 @@
     <div class="juego" id="juego">
 
         <!-- JUEGO -->
-        <input type="text" id="apuesta" value="10">
-        <button id="inicio" onclick="jugar()">Jugar</button>
-
-        <div id="cartas_croupier"></div>
-        <hr>
-        <div id="cartas_user"></div>
-        <br><br>
-        <div id="div1"></div>
-        <p id="result"></p>
 
     </div>
 
