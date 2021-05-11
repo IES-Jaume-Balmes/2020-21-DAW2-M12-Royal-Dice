@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Royal Dice</title>
-    <link>https://example.com/posts/</link>
+    <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/</link>
     <description>Recent content in Posts on Royal Dice</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 10 May 2021 17:17:20 +0200</lastBuildDate>
     
-	<atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Arquitectura de la aplicación</title>
-      <link>https://example.com/posts/arquitectura_de_la_aplicaci%C3%B3n/</link>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/arquitectura_de_la_aplicaci%C3%B3n/</link>
       <pubDate>Mon, 10 May 2021 17:17:20 +0200</pubDate>
       
-      <guid>https://example.com/posts/arquitectura_de_la_aplicaci%C3%B3n/</guid>
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/arquitectura_de_la_aplicaci%C3%B3n/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Descripción</title>
-      <link>https://example.com/posts/descripcion/</link>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/descripcion/</link>
       <pubDate>Mon, 10 May 2021 17:17:20 +0200</pubDate>
       
-      <guid>https://example.com/posts/descripcion/</guid>
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/descripcion/</guid>
       <description>&lt;h1 id=&#34;descripción&#34;&gt;Descripción&lt;/h1&gt;
 &lt;p&gt;La idea es tener un casino online con una página para iniciar session, una para registarse y otra donde puedas jugar a varios juegos de azar (blackjack, carta mas alta&amp;hellip;).&lt;/p&gt;
 &lt;p&gt;Para ello necessitamos una base de datos con los usuarios y sus datos y con el historial de partidas jugadas.&lt;/p&gt;
@@ -33,10 +33,10 @@
     
     <item>
       <title>Funcionamiento</title>
-      <link>https://example.com/posts/funcionamiento/</link>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/funcionamiento/</link>
       <pubDate>Mon, 10 May 2021 17:17:20 +0200</pubDate>
       
-      <guid>https://example.com/posts/funcionamiento/</guid>
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/funcionamiento/</guid>
       <description>&lt;h1 id=&#34;funcionamiento&#34;&gt;Funcionamiento&lt;/h1&gt;
 &lt;p&gt;Al entrar en la página te muestra la página de login, con un link a la página de registro.&lt;/p&gt;
 &lt;p&gt;Al iniciar session se muestra la página principal donde hay la opción de seleccionar los distintos juegos.&lt;/p&gt;
@@ -45,10 +45,10 @@
     
     <item>
       <title>Herramientas, lenguajes y frameworks utilizados</title>
-      <link>https://example.com/posts/herramientas_lenguajes_frameworks_utilizados/</link>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/herramientas_lenguajes_frameworks_utilizados/</link>
       <pubDate>Mon, 10 May 2021 17:17:20 +0200</pubDate>
       
-      <guid>https://example.com/posts/herramientas_lenguajes_frameworks_utilizados/</guid>
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/herramientas_lenguajes_frameworks_utilizados/</guid>
       <description>&lt;h1 id=&#34;herramientas-lenguajes-y-frameworks-utilizados&#34;&gt;Herramientas, lenguajes y frameworks utilizados&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Laravel&lt;/li&gt;
@@ -62,10 +62,10 @@
     
     <item>
       <title>Objetivos generales</title>
-      <link>https://example.com/posts/objetivos_generales/</link>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/objetivos_generales/</link>
       <pubDate>Mon, 10 May 2021 17:17:20 +0200</pubDate>
       
-      <guid>https://example.com/posts/objetivos_generales/</guid>
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/posts/objetivos_generales/</guid>
       <description>&lt;h1 id=&#34;objetivos-generales&#34;&gt;Objetivos generales&lt;/h1&gt;
 &lt;h2 id=&#34;frontend&#34;&gt;FRONTEND&lt;/h2&gt;
 &lt;p&gt;Hemos creado la estructura i disenyo de las páginas de login y register.
