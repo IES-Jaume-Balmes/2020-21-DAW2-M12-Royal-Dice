@@ -19,6 +19,7 @@ class RegistrationController extends Controller
 
         $usuario->name = $request->name;
         $usuario->email = $request->email;
+        $usuario->fichas = 0;
         $request->password = Hash::make($request->password);
         $usuario->password = $request->password;
         

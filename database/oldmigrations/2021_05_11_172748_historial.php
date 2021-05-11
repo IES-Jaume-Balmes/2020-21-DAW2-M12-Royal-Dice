@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHistorialTableCustom extends Migration
+class Historial extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateHistorialTableCustom extends Migration
      */
     public function up()
     {
-        Schema::create('historial_table_custom', function (Blueprint $table) {
+        Schema::create('historial', function (Blueprint $table) {
             $table->id();
             $table->foreignId('juego')->references('id')->on('juegos');
             $table->integer('apuesta');
@@ -30,6 +30,6 @@ class CreateHistorialTableCustom extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('historial_table_custom');
+        Schema::dropIfExists('historial');
     }
 }
