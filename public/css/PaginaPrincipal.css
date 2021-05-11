@@ -23,7 +23,7 @@
     right: 0;
     width: auto;
   }
-  svg {
+  .menusvg {
     margin-top: -20px;
     margin-left: 50px;
     cursor: pointer;
@@ -97,7 +97,7 @@
     position: fixed;
     top: 0;
     transition: background 0.15s;
-    height: 85%;
+    height: 90%;
     width: 18%;
     z-index: 1;
     margin-top: 5%;
@@ -107,7 +107,7 @@
     transform: scale(0);
   }
   .menu__toggle:checked ~ .menu__toggle-label svg:nth-of-type(2) {
-    left: 250px;
+    left: 120px;
     transform: scale(1);
     transition: transform 0.15s;
     transition-delay: 0.925s;
@@ -207,16 +207,7 @@
     width: 400px;
     margin-top: -60px;
   }
-  .info-perfil{
-    background: #5a4b22;
-    border: 3px solid #917839;
-    width: 300px;
-    height: 100px;
-    position: relative;
-    float: right;
-    margin-top: 40px;
-    margin-right: 50px;
-  }
+  
   .altura{
     margin-top: 80px;
     display: inline-block;
@@ -236,4 +227,41 @@
     padding-right: 50px;
     margin-left: -76px;
     margin-top: -52px;
+  }
+  .info-perfil{
+    background: #5a4b22;
+    border: 3px solid #917839;
+    width: 300px;
+    height: 100px;
+    position: relative;
+    float: right;
+    margin-top: 40px;
+    margin-right: 50px;
+  }
+  .contenedor{  /* usuario */
+    font-weight: bold;
+    padding-top: 20px;
+    display: inline-block;
+    position: absolute;
+    text-decoration: underline;
+}
+  .monedas{
+    font-weight: bold;
+    padding-top: 56px;
+    display: inline-block;
+    position: absolute;
+}
+  .perfil{
+      width: 90px;
+      height: auto;
+      padding: 5px;
+      padding-right: 10px;
+
+  }
+  .exit{
+      width: 30px;
+      position: absolute;
+      text-align: right;
+      padding-left: 163px;
+      padding-top: 3px;
   }
