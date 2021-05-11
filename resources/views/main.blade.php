@@ -45,7 +45,7 @@
                         <br>
                     </ol>
                 </li>
-                <li class="menu-item"><a href="#0">Cerrar Sesión</a></li>
+                <li class="menu-item"><a href="{{ route('logout') }}">Cerrar Sesión</a></li>
             </ol>
         </nav>
     </div>
@@ -55,7 +55,7 @@
 
             <div class="contenedor">USUARIO</div>
             <div class="monedas">[ MONEDAS ]</div>
-            <img class="exit" src="{{ asset('img/exit.png') }}" alt="">
+            <a href="{{ asset('logout') }}"><img class="exit" src="{{ asset('img/exit.png') }}" alt="Cerrar Sesión"></a>
             
     </div>
     <div class="juego" id="juego">
