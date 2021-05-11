@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://example.com/posts/arquitectura_de_la_aplicaci%C3%B3n/</loc>
+    <lastmod>2021-05-10T17:17:20+02:00</lastmod>
+  </url><url>
+    <loc>https://example.com/posts/descripcion/</loc>
+    <lastmod>2021-05-10T17:17:20+02:00</lastmod>
+  </url><url>
+    <loc>https://example.com/posts/funcionamiento/</loc>
+    <lastmod>2021-05-10T17:17:20+02:00</lastmod>
+  </url><url>
+    <loc>https://example.com/posts/herramientas_lenguajes_frameworks_utilizados/</loc>
+    <lastmod>2021-05-10T17:17:20+02:00</lastmod>
+  </url><url>
+    <loc>https://example.com/posts/objetivos_generales/</loc>
+    <lastmod>2021-05-10T17:17:20+02:00</lastmod>
+  </url><url>
+    <loc>https://example.com/posts/</loc>
+    <lastmod>2021-05-10T17:17:20+02:00</lastmod>
+  </url><url>
+    <loc>https://example.com/</loc>
+    <lastmod>2021-05-10T17:17:20+02:00</lastmod>
+  </url><url>
+    <loc>https://example.com/categories/</loc>
+  </url><url>
+    <loc>https://example.com/tags/</loc>
+  </url>
+</urlset>
