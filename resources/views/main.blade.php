@@ -65,6 +65,7 @@
     </div>
 
 </body>
-<script src="{{ asset('js/blackjack.js') }}"></script>
+<!-- <script src="{{ asset('js/blackjack.js') }}"></script> -->
+<script src="{{ asset('js/carta_mas_alta.js') }}"></script>
 
 </html>

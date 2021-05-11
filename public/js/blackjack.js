@@ -24,7 +24,7 @@ hr = document.createElement("hr");
 juego.appendChild(hr);
 
 //CREAR PARTE ZONA DE CARTAS USER
-div = document.createElement("div")
+div = document.createElement("div");
 div.id = "cartas_user";
 juego.appendChild(div);
 
@@ -34,12 +34,12 @@ juego.appendChild(br);
 juego.appendChild(br);
 
 //CREAR PARTE ZONA DE PEDIR CARTAS
-div = document.createElement("div")
+div = document.createElement("div");
 div.id = "div1";
 juego.appendChild(div);
 
-//CREAR PARTE ZONA DE PEDIR CARTAS
-p = document.createElement("p")
+//CREAR PARTE ZONA DE RESULTADO
+p = document.createElement("p");
 p.id = "result";
 juego.appendChild(p);
 
