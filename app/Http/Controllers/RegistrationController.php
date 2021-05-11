@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Symfony\Contracts\Service\Attribute\Required;
 
 class RegistrationController extends Controller
@@ -18,6 +19,7 @@ class RegistrationController extends Controller
 
         $usuario->name = $request->name;
         $usuario->email = $request->email;
+        $request->password = Hash::make($request->password);
         $usuario->password = $request->password;
         
 

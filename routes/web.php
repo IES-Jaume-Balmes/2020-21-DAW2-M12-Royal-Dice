@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\RegistrationController;
-
+use App\Http\Controllers\MainController;
+use Illuminate\Routing\Route as RoutingRoute;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,8 @@ Route::get('/', function () {
 Route::get('register', [RegistrationController::class, 'create']);
 Route::post('register', [RegistrationController::class, 'store'])->name('register.store');
 
+Route::get('main', [MainController::class, 'create']);
+
 Route::get('login', [SessionsController::class, 'create']);
+Route::get('logout', [SessionsController::class, 'logout'])->name('logout');
 Route::post('login', [SessionsController::class, 'authenticate'])->name('login.main');

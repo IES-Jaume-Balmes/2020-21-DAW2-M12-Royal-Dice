@@ -43,7 +43,7 @@
                         <br>
                     </ol>
                 </li>
-                <li class="menu-item"><a href="#0">Cerrar Sesión</a></li>
+                <li class="menu-item"><a href="{{ route('logout') }}">Cerrar Sesión</a></li>
             </ol>
         </nav>
     </div>

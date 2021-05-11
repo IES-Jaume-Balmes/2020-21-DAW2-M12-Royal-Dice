@@ -13,8 +13,18 @@
     <form class="box" method="post" action="{{ route('login.main') }} ">
         @csrf
         <h3>Login</h3>
-        <input type="text" name="name" placeholder="Usuario">
+        <input type="text" name="name" placeholder="Usuario" value="{{ old('user') }}">
+        @error('name')
+            
+            <small>*{{ $message }}</small>
+            <br>
+        @enderror
         <input type="password" name="password" placeholder="Contraseña">
+        @error('password')
+            
+            <small>*{{ $message }}</small>
+            <br>
+        @enderror
         <input type="submit" name="enviar">
         <p>¿Eres nuevo? </p><a href="../public/register">Registrate</a>
     </form>
