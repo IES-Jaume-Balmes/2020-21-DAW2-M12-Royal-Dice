@@ -153,7 +153,13 @@ function mostrar_cartas_croupier(cartas) {
     }
 
     for (let i = 0; i < cartas.length; i++) {
-        div.appendChild(generarCarta(cartas[i]));
+        lacarta = generarCarta(cartas[i]);
+        if (i == 0) {
+            lacarta.style.visibility = "hidden";
+            lacarta.id = "oculta";
+            //console.log(lacarta);
+        }
+        div.appendChild(lacarta);
     }
 }
 
@@ -224,6 +230,7 @@ function pedirUsuario(pedir) {
 }
 
 function noPedir() {
+    document.getElementById("oculta").style.visibility = "";
     pedir.remove();
     nopedir.remove();
     //PIDE CROUPIER
@@ -232,6 +239,7 @@ function noPedir() {
             cartas_croupier.push(cartas.pop());
             suma_croupier = sumar_cartas(cartas_croupier);
             mostrar_cartas_croupier(cartas_croupier);
+            document.getElementById("oculta").style.visibility = "";
         }
         console.log(cartas_croupier);
         console.log("Croupier " + suma_croupier);
