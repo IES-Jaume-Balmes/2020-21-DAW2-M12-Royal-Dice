@@ -28,9 +28,9 @@
         </label>
             <ol class='menu__content'>
                 <li class="menu-item"><a href="{{ route('perfil') }}">Perfil</a></li>
-                <li class="menu-item"><a href="#0">Consigue Monedas</a></li>
+                <li class="menu-item"><a href="{{ route('cajero') }}">Consigue Monedas</a></li>
                 <li class="menu-item">
-                    <a href="#0">Juegos</a>
+                    <a href="{{ route('main') }}">Juegos</a>
                     <ol class="sub-menu">
                         <li class="menu-item"><a href="{{ route('cartamasalta') }}">Carta Más Alta</a></li>
                         <li class="menu-item"><a href="{{ route('blackjack') }}">BlackJack</a></li>

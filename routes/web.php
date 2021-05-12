@@ -8,6 +8,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\BlackjackController;
 use App\Http\Controllers\CartaMasAltaController;
+use App\Http\Controllers\CajeroController;
 use Illuminate\Routing\Route as RoutingRoute;
 
 /*
@@ -38,3 +39,6 @@ Route::get('perfil', [PerfilController::class, 'show'])->name('perfil');
 
 Route::get('blackjack', [BlackjackController::class, 'show'])->name('blackjack');
 Route::get('cartamasalta', [CartaMasAltaController::class, 'show'])->name('cartamasalta');
+
+Route::get('cajero', [CajeroController::class, 'show'])->name('cajero');
+Route::post('cajero', [CajeroController::class, 'store'])->name('cajero.store');
