@@ -12,13 +12,15 @@ class CajeroController extends Controller
         return view('cajero');
     }
     public function store(Request $request){
-        
-        $credentials = $request->only('ficha');
+        $fichas = $request->only('ficha');
+        $user = User::find($fichas);
         
         // Auth::attempt($credentials);
-        if (Auth::user()) {
+        if ($user) {
             // Authentication passed...
-            $credentials = Auth::user('fichas');
+            // user::column('fichas')->increment($credentials);
+            $fichas = $user;
+            // $user->save();
             return redirect('main');
         }
         return redirect('login');

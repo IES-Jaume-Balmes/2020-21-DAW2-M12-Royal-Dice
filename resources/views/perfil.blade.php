@@ -20,12 +20,12 @@
         <h3 style="text-align: right;padding-left: 108px;">MONEDAS</h3>
         </div>
         <div class="user">
-            <input type="text" disabled name="name" style="margin-right: 15px;"placeholder="Usuario" value="{{ old('user') }}"> 
+            <input type="text" disabled name="name" style="margin-right: 15px;"placeholder="Usuario" value="{{ Auth::user()->name }}"> 
             @error('name')
             
                 <small>*{{ $message }}</small>
             @enderror 
-            <input type="text" disabled name="fichas" placeholder="420.000">
+            <input type="text" disabled name="fichas" value="{{ Auth::user()->fichas }}">
         </div>
         
         
