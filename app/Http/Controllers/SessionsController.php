@@ -37,5 +37,8 @@ class SessionsController extends Controller
 
         return redirect('/');
     }
+    // public function show(Request $request, $value){
+    //     $value = $request->session()->get('name');
+    // }
 }
 ?>
