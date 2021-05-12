@@ -32,8 +32,8 @@
                 <li class="menu-item">
                     <a href="#0">Juegos</a>
                     <ol class="sub-menu">
-                        <li class="menu-item"><a href="#0">Ruleta</a></li>
-                        <li class="menu-item"><a href="#0">BlackJack</a></li>
+                        <li class="menu-item"><a href="{{ route('cartamasalta') }}">Carta Más Alta</a></li>
+                        <li class="menu-item"><a href="{{ route('blackjack') }}">BlackJack</a></li>
                         <li class="menu-item"><a href="#0">Dados</a></li>
                     </ol>
                 </li>
@@ -59,9 +59,6 @@
 
     </div>
     <div class="juego" id="juego">
-
-        <!-- JUEGO -->
-
     </div>
 
 </body>

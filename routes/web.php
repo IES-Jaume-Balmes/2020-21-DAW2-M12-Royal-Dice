@@ -6,6 +6,8 @@ use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\BlackjackController;
+use App\Http\Controllers\CartaMasAltaController;
 use Illuminate\Routing\Route as RoutingRoute;
 
 /*
@@ -33,3 +35,6 @@ Route::get('logout', [SessionsController::class, 'logout'])->name('logout');
 Route::post('login', [SessionsController::class, 'authenticate'])->name('login.main');
 
 Route::get('perfil', [PerfilController::class, 'show'])->name('perfil');
+
+Route::get('blackjack', [BlackjackController::class, 'show'])->name('blackjack');
+Route::get('cartamasalta', [CartaMasAltaController::class, 'show'])->name('cartamasalta');
