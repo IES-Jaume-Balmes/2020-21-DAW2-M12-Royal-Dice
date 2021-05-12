@@ -291,6 +291,11 @@ a[href]:after {
     margin-right: 50px;
 }
 
+.info-perfil a {
+    position: initial;
+    color: black;
+}
+
 .contenedor {
     /* usuario */
     font-weight: bold;
