@@ -185,7 +185,7 @@ function generarCarta(carta) {
     el.style.textAlign = "center";
     el.style.fontSize = "xx-large";
     el.style.borderRadius = "10px";
-    el.innerHTML = carta.numero + '<br/>' + icon;
+    el.innerHTML = "<span>" + carta.numero + '<br/>' + icon + "</span>";
     document.getElementById("div1").appendChild(el);
     return el;
 }
@@ -247,7 +247,8 @@ function noPedir() {
     resolucion_partida();
 }
 
-function resolucion_partida(params) {
+function resolucion_partida() {
+    document.getElementById("oculta").style.visibility = "";
     if (suma_user > suma_croupier && suma_user <= 21 || suma_croupier > 21) {
         //console.log("GANA USER")
         document.getElementById("result").innerHTML = "Gana User";
