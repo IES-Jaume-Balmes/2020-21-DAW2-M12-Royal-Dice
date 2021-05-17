@@ -2,7 +2,7 @@ juego = document.getElementById("juego");
 
 //CREAR INPUT PARA INTRODUCIR APUESTA
 input = document.createElement("input");
-input.setAttribute("type", "text");
+input.setAttribute("type", "number");
 input.id = "apuesta"
 input.value = 10;
 juego.appendChild(input);
@@ -14,19 +14,43 @@ buton.appendChild(document.createTextNode("Jugar"));
 buton.id = "inicio";
 juego.appendChild(buton);
 
-//CREAR PARTE ZONA DE CARTAS CROUPIER
-div = document.createElement("div")
-div.id = "cartas_croupier";
+//CREAR PARTE ZONA DE RESULTADO
+div = document.createElement("div");
+div.id = "result";
+div.style.float = "right"
+div.style.marginRight = "10%";
+div.style.marginTop = "10%";
+div.style.fontSize = "95px";
+div.style.backgroundColor = "#9B8951";
+//float: right;margin-right: 10%;margin-top: 10%;font-size: 95px;background-color: #9B8951;
 juego.appendChild(div);
+
+//CREAR PARTE ZONA DE CARTAS CROUPIER
+zona = document.createElement("div");
+zona.id = "zona_croupier";
+juego.appendChild(zona);
+div = document.createElement("div");
+div.id = "cartas_croupier";
+zona.appendChild(div);
+suma = document.createElement("div");
+suma.id = "suma_croupier";
+//suma.style.backgroundColor = "white";
+zona.appendChild(suma);
 
 //CREAR LINEA PARA SEPARAR CARTAS DE CROUPIER DE USER
 hr = document.createElement("hr");
 juego.appendChild(hr);
 
 //CREAR PARTE ZONA DE CARTAS USER
+zona = document.createElement("div");
+zona.id = "zona_user";
+juego.appendChild(zona);
 div = document.createElement("div");
 div.id = "cartas_user";
-juego.appendChild(div);
+zona.appendChild(div);
+suma = document.createElement("div");
+suma.id = "suma_user";
+zona.appendChild(suma);
 
 //AÑADIMOS ESPACIOS
 br = document.createElement("br");
@@ -38,10 +62,7 @@ div = document.createElement("div");
 div.id = "div1";
 juego.appendChild(div);
 
-//CREAR PARTE ZONA DE RESULTADO
-p = document.createElement("p");
-p.id = "result";
-juego.appendChild(p);
+
 
 function inicializar() {
     document.getElementById("result").innerHTML = "";
@@ -65,8 +86,8 @@ function jugar() {
     //POR HACER
     //RETIRAMOS APUESTA DEL CLIENTE-----------------------------------------------------------------------------
     apuesta = document.getElementById("apuesta").value;
-    //console.log(apuesta);
-    //console.log(cartas);
+    ////console.log(apuesta);
+    ////console.log(cartas);
 
 
     //REPARTIMOS CARTAS-------------------------------------------------------------------------------------------
@@ -86,17 +107,27 @@ function jugar() {
     mostrar_cartas(cartas_user);
     mostrar_cartas_croupier(cartas_croupier);
     //generarCarta(cartas_user[0]);
-    console.log(cartas_user);
+    //console.log(cartas_user);
 
-    console.log(cartas_croupier);
+    //console.log(cartas_croupier);
 
     //CALCULAMOS SUMA DE LAS CARTAS----------------------------------------------------------------------------------
     suma_user = sumar_cartas(cartas_user);
+    document.getElementById("suma_user").innerHTML = suma_user;
     suma_croupier = sumar_cartas(cartas_croupier);
+    c1 = cartas_croupier[1].numero;
+    if (isNaN(c1)) {
+        if (c1 == "As") {
+            c1 = 11;
+        } else if (c1 == "Jota" || c1 == "Dama" || c1 == "Rey") {
+            c1 = 10;
+        }
+    }
+    document.getElementById("suma_croupier").innerHTML = c1;
 
     //MOSTRAMOS LA SUMA-----------------------------------------------------------------------------------------------
-    console.log("User " + suma_user);
-    console.log("Croupier " + suma_croupier);
+    //console.log("User " + suma_user);
+    //console.log("Croupier " + suma_croupier);
 
     //PEDIR USUARIO???-----------------------------------------------------------------------
     if (suma_user == 21) {
@@ -155,9 +186,8 @@ function mostrar_cartas_croupier(cartas) {
     for (let i = 0; i < cartas.length; i++) {
         lacarta = generarCarta(cartas[i]);
         if (i == 0) {
-            lacarta.style.visibility = "hidden";
+            lacarta.firstChild.style.visibility = "hidden";
             lacarta.id = "oculta";
-            //console.log(lacarta);
         }
         div.appendChild(lacarta);
     }
@@ -216,10 +246,11 @@ function pedirUsuario(pedir) {
     if (pedir) {
         cartas_user.push(cartas.pop());
         suma_user = sumar_cartas(cartas_user);
-        console.log(cartas_user);
+        //console.log(cartas_user);
         suma_user = sumar_cartas(cartas_user);
-        console.log("User " + suma_user);
+        //console.log("User " + suma_user);
         mostrar_cartas(cartas_user);
+        document.getElementById("suma_user").innerHTML = suma_user;
         if (suma_user > 21) {
             noPedir();
             //alert("te has pasado");
@@ -230,7 +261,7 @@ function pedirUsuario(pedir) {
 }
 
 function noPedir() {
-    document.getElementById("oculta").style.visibility = "";
+    document.getElementById("oculta").firstChild.style.visibility = "";
     pedir.remove();
     nopedir.remove();
     //PIDE CROUPIER
@@ -239,27 +270,30 @@ function noPedir() {
             cartas_croupier.push(cartas.pop());
             suma_croupier = sumar_cartas(cartas_croupier);
             mostrar_cartas_croupier(cartas_croupier);
-            document.getElementById("oculta").style.visibility = "";
+            document.getElementById("oculta").firstChild.style.visibility = "";
+            document.getElementById("suma_croupier").innerHTML = suma_croupier;
         }
-        console.log(cartas_croupier);
-        console.log("Croupier " + suma_croupier);
+        //console.log(cartas_croupier);
+        //console.log("Croupier " + suma_croupier);
     }
     resolucion_partida();
 }
 
 function resolucion_partida() {
-    document.getElementById("oculta").style.visibility = "";
+    document.getElementById("suma_user").innerHTML = suma_user;
+    document.getElementById("suma_croupier").innerHTML = suma_croupier;
+    document.getElementById("oculta").firstChild.style.visibility = "";
     if (suma_user > suma_croupier && suma_user <= 21 || suma_croupier > 21) {
-        //console.log("GANA USER")
+        ////console.log("GANA USER")
         document.getElementById("result").innerHTML = "Gana User";
     } else {
-        //console.log("GANA LA COUPIER");
-        document.getElementById("result").innerHTML = "Gana CPU";
+        ////console.log("GANA LA COUPIER");
+        document.getElementById("result").innerHTML = "Gana Croupier";
     }
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
 }
-
+////NO USADO
 function wait(ms) {
     var start = new Date().getTime();
     var end = start;
