@@ -267,7 +267,7 @@ function noPedir() {
     pedir.remove();
     nopedir.remove();
     //PIDE CROUPIER
-    if (suma_user < 21) {
+    if (suma_user <= 21) {
         while (suma_croupier <= 17 && suma_croupier < suma_user) {
             cartas_croupier.push(cartas.pop());
             suma_croupier = sumar_cartas(cartas_croupier);
