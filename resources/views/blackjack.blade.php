@@ -14,7 +14,7 @@
 <body>
     <!-- MENÚ -->
     <div class="altura">
-        <img class="longlogo" src="{{ asset('img/longlogo.png') }}" alt="longlogo">
+        <a id="longlogo" href="{{ route('main') }}"><img class="longlogo" src="{{ asset('img/longlogo.png') }}" alt="longlogo"></a>
 
         <nav class="menu">
             <input id="menu__toggle" type="checkbox" class='menu__toggle' />

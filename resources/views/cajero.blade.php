@@ -6,16 +6,39 @@
     <title>Cajero - Royal Dice</title>
     <link rel="stylesheet" href="{{ asset('css/cajero.css')}}">
     <link rel="icon" type="image/png" href="{{ asset('img/icono.png') }}" /> 
+    <style>
+    button {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 10px auto;
+        margin-top: 20px;
+        text-align: center;
+        border: 2px solid white;
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    button:hover {
+        background: rgb(255, 255, 255);
+        color: #c49d3c;
+        opacity: 0.6;
+    }
+    </style>
 </head>
 
 <body>
     <img src="{{ asset('img/cajero.png')}}" id="cajero">
 
     <form class="box" method="post" action="{{ route('cajero.store') }}">
-        @csrf
-        <!-- EDITAAAAAAAAAAAAAR -->
-        
+        @csrf    
         <h3>introduce la cantidad de fichas que deseas comprar</h3>
+        <p>Tienes {{ $fichas }} fichas</p>
         <input type="text" name="ficha" id="fichas">
         <div class="informacion">
             <h4>1 FICHA = 1 €</h4>
@@ -48,7 +71,7 @@
         </div>
         <input type="submit" name="enviar" value="Comprar">
     </form>
-
+    <a href="{{ route('main') }}"><button>Volver</button></a>
 
 
 

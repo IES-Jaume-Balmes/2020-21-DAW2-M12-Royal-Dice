@@ -50,6 +50,11 @@ a[href] {
     text-decoration: none;
 }
 
+#longlogo {
+    position: absolute;
+    margin-left: 25%;
+}
+
 a[href]:hover:after {
     transform: scaleX(1);
 }
