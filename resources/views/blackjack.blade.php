@@ -58,6 +58,7 @@
             <a href="{{ asset('logout') }}"><img class="exit" src="{{ asset('img/exit.png') }}" alt="Cerrar Sesión"></a>
 
     </div>
+    <img src="{{ asset('img/reverso.jpg') }}" style="display:none" alt="reversoCarta">
     <div class="juego" id="juego">
 
         <!-- JUEGO -->

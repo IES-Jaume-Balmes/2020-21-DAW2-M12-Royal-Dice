@@ -18,9 +18,9 @@ juego.appendChild(buton);
 div = document.createElement("div");
 div.id = "result";
 div.style.float = "right"
-div.style.marginRight = "10%";
+div.style.marginRight = "5%";
 div.style.marginTop = "10%";
-div.style.fontSize = "95px";
+div.style.fontSize = "85px";
 div.style.backgroundColor = "#9B8951";
 //float: right;margin-right: 10%;margin-top: 10%;font-size: 95px;background-color: #9B8951;
 juego.appendChild(div);
@@ -188,6 +188,7 @@ function mostrar_cartas_croupier(cartas) {
         if (i == 0) {
             lacarta.firstChild.style.visibility = "hidden";
             lacarta.id = "oculta";
+            lacarta.style.backgroundImage = "url('img/reverso.jpg')";
         }
         div.appendChild(lacarta);
     }
@@ -262,15 +263,17 @@ function pedirUsuario(pedir) {
 
 function noPedir() {
     document.getElementById("oculta").firstChild.style.visibility = "";
+    document.getElementById("oculta").style.backgroundImage = "";
     pedir.remove();
     nopedir.remove();
     //PIDE CROUPIER
     if (suma_user < 21) {
-        while (suma_croupier < 17 && suma_croupier < suma_user) {
+        while (suma_croupier <= 17 && suma_croupier < suma_user) {
             cartas_croupier.push(cartas.pop());
             suma_croupier = sumar_cartas(cartas_croupier);
             mostrar_cartas_croupier(cartas_croupier);
             document.getElementById("oculta").firstChild.style.visibility = "";
+            document.getElementById("oculta").style.backgroundImage = "";
             document.getElementById("suma_croupier").innerHTML = suma_croupier;
         }
         //console.log(cartas_croupier);
@@ -283,6 +286,7 @@ function resolucion_partida() {
     document.getElementById("suma_user").innerHTML = suma_user;
     document.getElementById("suma_croupier").innerHTML = suma_croupier;
     document.getElementById("oculta").firstChild.style.visibility = "";
+    document.getElementById("oculta").style.backgroundImage = "";
     if (suma_user > suma_croupier && suma_user <= 21 || suma_croupier > 21) {
         ////console.log("GANA USER")
         document.getElementById("result").innerHTML = "Gana User";
