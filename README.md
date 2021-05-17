@@ -22,7 +22,7 @@ Juanma Sánchez
 ## Requisitos
 
 - Xampp (Arrancar el servidor web Apache y MySQL)
-- Descargar el proyecto dentro de la carpeta xampp/htdocs.
+- Descargar el proyecto dentro del directorio xampp/htdocs.
 
 ## Creación de la Base de Datos
 
