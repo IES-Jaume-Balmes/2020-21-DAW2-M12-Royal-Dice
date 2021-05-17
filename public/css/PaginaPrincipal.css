@@ -72,6 +72,10 @@ a[href]:after {
     transform: scaleX(0);
 }
 
+a:hover {
+    color: white !important;
+}
+
 .menu {
     position: relative;
     width: 250px;

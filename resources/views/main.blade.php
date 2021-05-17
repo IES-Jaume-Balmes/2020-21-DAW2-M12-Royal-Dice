@@ -36,7 +36,7 @@
                     <ol class="sub-menu">
                         <li class="menu-item"><a href="{{ route('cartamasalta') }}">Carta Más Alta</a></li>
                         <li class="menu-item"><a href="{{ route('blackjack') }}">BlackJack</a></li>
-                        <li class="menu-item"><a href="#0">Dados</a></li>
+                        <li class="menu-item"><a href="#0">Tragaperras</a></li>
                     </ol>
                 </li>
                 <li class="menu-item">
@@ -79,7 +79,7 @@
               </div>
               <div class="carousel-item">
                 <!-- <a href="{{ route('blackjack') }}"> -->
-                <img class="d-block w-100" src="{{ asset('img/dados.png') }}" alt="Third slide" style="width: auto;height: 394px;">
+                <img class="d-block w-100" src="{{ asset('img/tragaperras.png') }}" alt="Third slide" style="width: auto;height: 394px;">
                 <!-- </a> -->
               </div>
             </div>

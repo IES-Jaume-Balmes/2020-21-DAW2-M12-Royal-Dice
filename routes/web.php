@@ -36,9 +36,11 @@ Route::get('logout', [SessionsController::class, 'logout'])->name('logout');
 Route::post('login', [SessionsController::class, 'authenticate'])->name('login.main');
 
 Route::get('perfil', [PerfilController::class, 'show'])->name('perfil');
+Route::post('perfil', [PerfilController::class, 'store'])->name('perfil.store');
 
 Route::get('blackjack', [BlackjackController::class, 'show'])->name('blackjack');
 Route::post('blackjack', [BlackjackController::class, 'store'])->name('blackjack.store');
+
 Route::get('cartamasalta', [CartaMasAltaController::class, 'show'])->name('cartamasalta');
 
 Route::get('cajero', [CajeroController::class, 'show'])->name('cajero');

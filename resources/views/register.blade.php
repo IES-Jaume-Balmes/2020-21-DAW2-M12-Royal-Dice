@@ -19,7 +19,7 @@
             <small>*{{ $message }}</small>
             <br>
         @enderror
-        <input type="text" name="email" placeholder="email" value="{{ old('email') }}">
+        <input type="text" name="email" placeholder="Email" value="{{ old('email') }}">
         @error('email')
             
             <small>*{{ $message }}</small>
