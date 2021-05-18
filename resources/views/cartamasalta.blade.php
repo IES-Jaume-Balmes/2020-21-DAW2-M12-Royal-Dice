@@ -8,7 +8,32 @@
     <title>Inicio - Royal Dice</title>
     <link rel="stylesheet" href="{{ asset('css/paginaprincipal.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('img/icono.png') }}" />
-
+    <style>
+        #juego{
+            text-align: center;
+        }
+        #apuesta,button{
+            background-color: #B19D60;
+            height: 30px;
+            margin-left: 10px;
+            margin-top: 10px;
+            border-radius: 12px;
+            border: 1.5px solid rgba(0, 0, 0, 0.801);
+        }
+        button:active {
+            background-color: #B19D60;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        #result{
+            font-weight: bold;
+            color: white;
+        }
+        ::placeholder {
+            color: black;
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
