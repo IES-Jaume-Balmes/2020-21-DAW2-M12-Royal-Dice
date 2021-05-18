@@ -9,7 +9,9 @@ use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\BlackjackController;
 use App\Http\Controllers\CartaMasAltaController;
 use App\Http\Controllers\CajeroController;
+use App\Http\Controllers\TemplateController;
 use Illuminate\Routing\Route as RoutingRoute;
+use Symfony\Component\Routing\Route as ComponentRoutingRoute;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +49,5 @@ Route::get('cartamasalta', [CartaMasAltaController::class, 'show'])->name('carta
 
 Route::get('cajero', [CajeroController::class, 'show'])->name('cajero');
 Route::post('cajero', [CajeroController::class, 'store'])->name('cajero.store');
+
+Route::get('template', [TemplateController::class, 'show']);

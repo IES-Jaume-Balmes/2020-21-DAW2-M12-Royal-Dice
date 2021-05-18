@@ -5,9 +5,7 @@
 </head>
 <body>
     @include('layouts/header')
-    <div class="juego" id="juego">
-        <!-- JUEGO -->
+    <div class="juego">
     </div>
 </body>
-<script src="{{ asset('js/blackjack.js') }}"></script> 
 </html>
