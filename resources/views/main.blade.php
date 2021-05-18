@@ -23,7 +23,7 @@
                 <img class="d-block w-100" src="{{ asset('img/cartas.png') }}" alt="Second slide" style="width: auto;height: 394px;"></a> 
               </div>
               <div class="carousel-item">
-                <!-- <a href="{{ route('blackjack') }}"> -->
+                <a href="{{ route('tragaperras') }}">
                 <img class="d-block w-100" src="{{ asset('img/tragaperras.png') }}" alt="Third slide" style="width: auto;height: 394px;">
                 <!-- </a> -->
               </div>
