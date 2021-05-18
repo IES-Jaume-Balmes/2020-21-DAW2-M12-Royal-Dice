@@ -35,6 +35,8 @@ Route::get('login', [SessionsController::class, 'create']);
 Route::get('logout', [SessionsController::class, 'logout'])->name('logout');
 Route::post('login', [SessionsController::class, 'authenticate'])->name('login.main');
 
+
+
 Route::get('perfil', [PerfilController::class, 'show'])->name('perfil');
 Route::post('perfil', [PerfilController::class, 'store'])->name('perfil.store');
 
