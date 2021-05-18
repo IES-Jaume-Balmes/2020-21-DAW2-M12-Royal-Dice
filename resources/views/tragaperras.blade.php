@@ -7,10 +7,11 @@
     @include('layouts/header')
     <div style="text-align: center" class="juego" id="juego">
         <h1 style="color: white">Slot Machine !</h1>
-        <h3 style="color: white">Pulsa para jugar</h3>
-        <img src="{{ asset('img/tragaperras/tragagif.gif') }}" alt="">
-        <img src="{{ asset('img/tragaperras/tragagif.gif') }}" alt="">
-        <img src="{{ asset('img/tragaperras/tragagif.gif') }}" alt="">
+        <button>Pulsa para jugar</button><br>
+        <img src="{{ asset('img/tragaperras/tragagif0.gif') }}" alt="">
+        <img src="{{ asset('img/tragaperras/tragagif1.gif') }}" alt="">
+        <img src="{{ asset('img/tragaperras/tragagif2.gif') }}" alt="">
+        <p>El resultado es: </p>
     </div>
 </body>
 <script src="{{ asset('js/tragaperras.js') }}"></script>
