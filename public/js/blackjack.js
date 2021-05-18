@@ -17,7 +17,7 @@ juego.appendChild(buton);
 //CREAR PARTE ZONA DE RESULTADO
 div = document.createElement("div");
 div.id = "result";
-div.style.float = "right"
+div.style.display = "none"
 div.style.marginRight = "5%";
 div.style.marginTop = "10%";
 div.style.fontSize = "85px";
