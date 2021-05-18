@@ -12,8 +12,6 @@ class CajeroController extends Controller
          return view('cajero', [
              'fichas' => Auth::user()->fichas
          ]);
-
-        // return view('cajero');
     }
     public function store(Request $request){
         $params = $request->only('ficha');
@@ -27,17 +25,5 @@ class CajeroController extends Controller
         return view('cajero', [
             'fichas' => $dbUser->fichas
         ]);
-
-        // return Auth::user();
-        
-        // // Auth::attempt($credentials);
-        // if ($user) {
-        //     // Authentication passed...
-        //     // user::column('fichas')->increment($credentials);
-        //     $fichas = $user;
-        //     // $user->save();
-        //     return redirect('main');
-        // }
-        // return redirect('login');
     }
 }

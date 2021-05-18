@@ -10,6 +10,7 @@ use App\Http\Controllers\BlackjackController;
 use App\Http\Controllers\CartaMasAltaController;
 use App\Http\Controllers\CajeroController;
 use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\TragaperrasController;
 use Illuminate\Routing\Route as RoutingRoute;
 use Symfony\Component\Routing\Route as ComponentRoutingRoute;
 
@@ -46,6 +47,8 @@ Route::get('blackjack', [BlackjackController::class, 'show'])->name('blackjack')
 Route::post('blackjack', [BlackjackController::class, 'store'])->name('blackjack.store');
 
 Route::get('cartamasalta', [CartaMasAltaController::class, 'show'])->name('cartamasalta');
+
+Route::get('tragaperras', [TragaperrasController::class, 'show'])->name('tragaperras');
 
 Route::get('cajero', [CajeroController::class, 'show'])->name('cajero');
 Route::post('cajero', [CajeroController::class, 'store'])->name('cajero.store');
