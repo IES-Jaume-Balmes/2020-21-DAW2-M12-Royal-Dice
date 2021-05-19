@@ -1,3 +1,5 @@
+balance = 0;
+
 juego = document.getElementById("juego");
 
 //CREAR INPUT PARA INTRODUCIR APUESTA
@@ -14,7 +16,8 @@ buton.appendChild(document.createTextNode("Jugar"));
 buton.id = "inicio";
 juego.appendChild(buton);
 
-var opciones = JSON.parse('{ "opciones": [{ "valor": "Diamante", "img": "img/tragaperras/diamante.png" },  { "valor": "Limon", "img": "img/tragaperras/limon.png" }, { "valor": "Naranja", "img": "img/tragaperras/naranja.png" }, { "valor": "Platano", "img": "img/tragaperras/platano.png" }, { "valor": "Sandia", "img": "img/tragaperras/sandia.png" }, { "valor": "Siete", "img": "img/tragaperras/siete.png" }]}');
+var opciones = JSON.parse('{ "opciones": [{"nombre": "Diamante", "valor": "5", "img": "img/tragaperras/diamante.png" },{ "nombre": "Limon", "valor": "0", "img": "img/tragaperras/limon.png" }, { "nombre": "Naranja", "valor": "1", "img": "img/tragaperras/naranja.png" }, { "nombre": "Platano", "valor": "0.5", "img": "img/tragaperras/platano.png" }, { "nombre": "Sandia", "valor": "1.5", "img": "img/tragaperras/sandia.png" }, { "nombre": "Caquita", "valor": "0", "img": "img/tragaperras/caquita.png" }, { "nombre": "Siete", "valor": "2", "img": "img/tragaperras/siete.png" }]}');
+console.log(opciones)
 
 function jugar() {
     document.getElementById("inicio").style.display = "none";
@@ -22,6 +25,8 @@ function jugar() {
     if (document.contains(document.getElementById("maquina"))) {
         document.getElementById("maquina").remove();
     }
+
+    apuesta = parseInt(document.getElementById("apuesta").value);
 
     //CREAR ZONA DE SLOTS(LO QUE EQUIVALDRIA A LA MAQUINA)
     maquina = document.createElement("div");
@@ -65,14 +70,36 @@ function jugar() {
 
 function parar() {
     document.getElementById("parar").remove();
+    results = [];
     for (let i = 0; i < 3; i++) {
         slot = document.getElementById("slot" + i);
         result = opciones.opciones[Math.floor(Math.random() * 6)];
+        results.push(result);
         slot.style.backgroundImage = "url(" + result.img + ")";
         slot.style.backgroundSize = "100% 100%";
     }
+    console.log(results);
+
+    ganancias = 0;
+    for (let i = 0; i < results.length; i++) {
+        if (results[i].nombre == "Caquita") {
+            ganancias = 0;
+            break;
+        }
+        ganancias += parseInt(results[i].valor) * apuesta;
+    }
+    console.log(ganancias);
+
+    if (ganancias == 0) {
+        balance -= apuesta;
+    } else {
+        balance += ganancias
+    }
+
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
+
+
 }
 
 function wait(ms) {

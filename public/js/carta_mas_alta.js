@@ -155,6 +155,9 @@ async function resolucion_partida(resultado) {
         botones.removeChild(botones.firstChild);
     }
 
+
+
+    mostrar_carta(cartas[1]);
     p = document.getElementById("result");
     if (resultado) {
         p.innerHTML = "Has ganado";
@@ -174,7 +177,7 @@ async function resolucion_partida(resultado) {
         p.innerHTML = "Has perdido";
         registro_partidas.push("L");
     }
-    mostrar_carta(cartas[1]);
+
     console.log(registro_partidas);
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
