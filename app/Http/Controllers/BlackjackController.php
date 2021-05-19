@@ -17,7 +17,6 @@ class BlackjackController extends Controller
 
         $dbUser = User::find($user->id);
 
-        echo 'hola';
         $dbUser->fichas - $params['apuesta'];
         $dbUser->save();
        
@@ -25,4 +24,5 @@ class BlackjackController extends Controller
             'fichas' => $dbUser->fichas
         ]);
     }
+    
 }

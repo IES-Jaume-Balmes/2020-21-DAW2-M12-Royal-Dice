@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     @include('layouts/head')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
         #juego{
             text-align: center;

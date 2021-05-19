@@ -3,7 +3,7 @@ juego = document.getElementById("juego");
 
 //CREAR INPUT PARA INTRODUCIR APUESTA
 input = document.createElement("input");
-input.setAttribute("type", "text");
+input.setAttribute("type", "number");
 input.id = "apuesta"
 input.value = 10;
 juego.appendChild(input);
@@ -97,7 +97,7 @@ function mostrar_carta(carta) {
     //}
 }
 
-function jugar() {
+async function jugar() {
     //LIMPIAR DIV
     zona_cartas = document.getElementById("carta");
     while (zona_cartas.firstChild) {
@@ -111,10 +111,27 @@ function jugar() {
 
     //POR HACER
     //RETIRAMOS APUESTA DEL CLIENTE-----------------------------------------------------------------------------
-    apuesta = document.getElementById("apuesta").value;
-    //console.log(apuesta);
-    //console.log(cartas);
-    //console.log(cartas[0].numero)
+    apuesta = parseInt(document.getElementById("apuesta").value);
+    csrf = document.querySelector('meta[name="csrf-token"]').content;
+    var resp = await fetch('http://localhost/2020-21-DAW2-M12-Royal-Dice/public/cartamasalta/apuesta', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrf
+
+        },
+        body: JSON.stringify({ apuesta: apuesta })
+    });
+    //console.log(await resp.json());
+    respo = await resp.json();
+    console.log(respo.sepuede);
+    if (!respo.sepuede) {
+        nofichas = document.createElement("p");
+        nofichas.innerHTML = "Compra puto";
+        juego.appendChild(nofichas);
+        return;
+    }
     mostrar_carta(cartas[0]);
 
     var primera_carta = valor_carta(cartas[0]);
@@ -132,7 +149,7 @@ function jugar() {
     document.getElementById("div1").appendChild(menor);
 }
 
-function resolucion_partida(resultado) {
+async function resolucion_partida(resultado) {
     botones = document.getElementById("div1");
     while (botones.firstChild) {
         botones.removeChild(botones.firstChild);
@@ -142,6 +159,17 @@ function resolucion_partida(resultado) {
     if (resultado) {
         p.innerHTML = "Has ganado";
         registro_partidas.push("W");
+        var resp = await fetch('http://localhost/2020-21-DAW2-M12-Royal-Dice/public/cartamasalta/recompensa', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrf
+
+            },
+            body: JSON.stringify({ apuesta: apuesta })
+        });
+        console.log(await resp.json());
     } else {
         p.innerHTML = "Has perdido";
         registro_partidas.push("L");
