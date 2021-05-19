@@ -11,17 +11,37 @@ class BlackjackController extends Controller
     public function show(){
         return view('blackjack');
     }
-    public function store(Request $request){
+    public function apuesta(Request $request){
         $params = $request->only('apuesta');
+        $apuesta = $params['apuesta'];
         $user = Auth::user();
 
         $dbUser = User::find($user->id);
-
-        $dbUser->fichas - $params['apuesta'];
+        if($dbUser->fichas < $apuesta){
+            return response()->json([
+                'sepuede' => false
+            ]);
+        }
+        $dbUser->fichas -= $apuesta;
         $dbUser->save();
-       
-        return view('blackjack', [
-            'fichas' => $dbUser->fichas
+
+        return response()->json([
+            'sepuede' => true
+        ]);
+    }
+    public function recompensa(Request $request){
+        $params = $request->only('apuesta');
+        $apuesta = $params['apuesta'];
+        $user = Auth::user();
+
+        $dbUser = User::find($user->id);
+        
+        $dbUser->fichas += $apuesta*2;
+        $dbUser->save();
+
+        return response()->json([
+            'anadido' => true
+
         ]);
     }
     

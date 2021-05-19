@@ -76,7 +76,7 @@ function inicializar() {
     return cartas;
 }
 
-function jugar() {
+async function jugar() {
     document.getElementById("apuesta").style.display = "none";
     document.getElementById("inicio").style.display = "none";
     //MEZCAMOS CARTAS------------------------------------------------------------------------------------------
@@ -85,7 +85,27 @@ function jugar() {
 
     //POR HACER
     //RETIRAMOS APUESTA DEL CLIENTE-----------------------------------------------------------------------------
-    apuesta = document.getElementById("apuesta").value;
+    apuesta = parseInt(document.getElementById("apuesta").value);
+    csrf = document.querySelector('meta[name="csrf-token"]').content;
+    var resp = await fetch('blackjack/apuesta', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrf
+
+        },
+        body: JSON.stringify({ apuesta: apuesta })
+    });
+    //console.log(await resp.json());
+    respo = await resp.json();
+    console.log(respo.sepuede);
+    if (!respo.sepuede) {
+        nofichas = document.createElement("p");
+        nofichas.innerHTML = "Compra puto";
+        juego.appendChild(nofichas);
+        return;
+    }
     ////console.log(apuesta);
     ////console.log(cartas);
 
@@ -282,7 +302,7 @@ function noPedir() {
     resolucion_partida();
 }
 
-function resolucion_partida() {
+async function resolucion_partida() {
     document.getElementById("suma_user").innerHTML = suma_user;
     document.getElementById("suma_croupier").innerHTML = suma_croupier;
     document.getElementById("oculta").firstChild.style.visibility = "";
@@ -290,6 +310,17 @@ function resolucion_partida() {
     if (suma_user > suma_croupier && suma_user <= 21 || suma_croupier > 21) {
         ////console.log("GANA USER")
         document.getElementById("result").innerHTML = "Gana User";
+        var resp = await fetch('blackjack/recompensa', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrf
+
+            },
+            body: JSON.stringify({ apuesta: apuesta })
+        });
+        console.log(await resp.json());
     } else {
         ////console.log("GANA LA COUPIER");
         document.getElementById("result").innerHTML = "Gana Croupier";

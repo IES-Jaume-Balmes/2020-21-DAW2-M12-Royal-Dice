@@ -2,13 +2,16 @@
 <html lang="es">
 <head>
     @include('layouts/head')
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/paginaprincipal') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
         #juego{
             text-align: center;
             margin-top: 70px;
             height: 430px;
         }
-        #apuesta,button{
+        #apuesta button{
             background-color: #B19D60;
             height: 30px;
             margin-left: 10px;
@@ -44,6 +47,20 @@
     <div class="juego" id="juego">
         <!-- JUEGO -->
     </div>
+    <div class="instrucciones accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Instrucciones ❓
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                El objetivo es simple: ganarle al Croupier obteniendo el puntaje más cercano a 21. Las figuras (el Valet, la Reina y el Rey) valen 10, el As vale 11 o 1 y todas las otras cartas conservan su valor. El Black Jack se produce cuando las dos (2) primeras cartas son un diez o cualquier figura más un As.
+            </div>
+        </div>
+    </div>
 </body>
 <script src="{{ asset('js/blackjack.js') }}"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </html>

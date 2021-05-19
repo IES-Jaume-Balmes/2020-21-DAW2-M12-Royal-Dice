@@ -44,7 +44,8 @@ Route::get('perfil', [PerfilController::class, 'show'])->name('perfil');
 Route::post('perfil', [PerfilController::class, 'store'])->name('perfil.store');
 
 Route::get('blackjack', [BlackjackController::class, 'show'])->name('blackjack');
-Route::post('blackjack', [BlackjackController::class, 'store'])->name('blackjack.store');
+Route::post('blackjack/apuesta', [BlackjackController::class, 'apuesta'])->name('blackjack.apuesta');
+Route::post('blackjack/recompensa', [BlackjackController::class, 'recompensa'])->name('blackjack.recompensa');
 
 Route::get('cartamasalta', [CartaMasAltaController::class, 'show'])->name('cartamasalta');
 Route::post('cartamasalta/apuesta', [CartaMasAltaController::class, 'apuesta'])->name('cartamasalta.apuesta');
