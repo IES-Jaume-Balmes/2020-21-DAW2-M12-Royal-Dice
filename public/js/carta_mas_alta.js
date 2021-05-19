@@ -113,7 +113,7 @@ async function jugar() {
     //RETIRAMOS APUESTA DEL CLIENTE-----------------------------------------------------------------------------
     apuesta = parseInt(document.getElementById("apuesta").value);
     csrf = document.querySelector('meta[name="csrf-token"]').content;
-    var resp = await fetch('http://localhost/2020-21-DAW2-M12-Royal-Dice/public/cartamasalta/apuesta', {
+    var resp = await fetch('cartamasalta/apuesta', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -159,7 +159,7 @@ async function resolucion_partida(resultado) {
     if (resultado) {
         p.innerHTML = "Has ganado";
         registro_partidas.push("W");
-        var resp = await fetch('http://localhost/2020-21-DAW2-M12-Royal-Dice/public/cartamasalta/recompensa', {
+        var resp = await fetch('cartamasalta/recompensa', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
