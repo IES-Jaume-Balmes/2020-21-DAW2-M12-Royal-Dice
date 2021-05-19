@@ -128,7 +128,7 @@ async function jugar() {
     console.log(respo.sepuede);
     if (!respo.sepuede) {
         nofichas = document.createElement("p");
-        nofichas.innerHTML = "Compra puto";
+        nofichas.innerHTML = "Compra fichas para seguir jugando";
         juego.appendChild(nofichas);
         return;
     }

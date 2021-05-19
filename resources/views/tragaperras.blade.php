@@ -36,7 +36,7 @@
                     </p>
                     <br>
                     <h4>✖ MULTIPLICADORES ✖</h4>
-                    <p>Caquita = X (3%) {Pierdes la apuesta}</p>
+                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/caquita.png') }}" alt=""> = X (3%) {Pierdes la apuesta}</p>
                     <p><img style="width: 50px" src="{{ asset('img/tragaperras/limon.png') }}" alt=""> = 0 (58%)</p>
                     <p><img style="width: 50px" src="{{ asset('img/tragaperras/platano.png') }}" alt=""> = 0.5 (16%)</p>
                     <p><img style="width: 50px" src="{{ asset('img/tragaperras/naranja.png') }}" alt=""> = 1 (9%)</p>
