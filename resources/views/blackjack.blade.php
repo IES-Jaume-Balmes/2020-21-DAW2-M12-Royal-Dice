@@ -3,7 +3,6 @@
 <head>
     @include('layouts/head')
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/paginaprincipal.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
         #juego{
@@ -11,7 +10,7 @@
             margin-top: 70px;
             height: 430px;
         }
-        #apuesta button{
+        #apuesta,button{
             background-color: #B19D60;
             height: 30px;
             margin-left: 10px;
@@ -41,6 +40,7 @@
             color: white;
         }
     </style>
+    <link rel="stylesheet" href="{{ asset('css/paginaprincipal.css') }}">
 </head>
 <body>
     @include('layouts/header')

@@ -203,8 +203,6 @@ async function parar() {
     div.style.display = "";
     div.innerHTML = "En la ultima partida has ganado " + ganancias + " fichas.<br>Tu balance total es de " + balance + " fichas en las ultimas " + cont + " partidas.";
 
-
-
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
 
