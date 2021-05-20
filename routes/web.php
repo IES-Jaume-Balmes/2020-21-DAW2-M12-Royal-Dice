@@ -52,6 +52,8 @@ Route::post('cartamasalta/apuesta', [CartaMasAltaController::class, 'apuesta'])-
 Route::post('cartamasalta/recompensa', [CartaMasAltaController::class, 'recompensa'])->name('cartamasalta.recompensa');
 
 Route::get('tragaperras', [TragaperrasController::class, 'show'])->name('tragaperras');
+Route::post('tragaperras/apuesta', [TragaperrasController::class, 'apuesta'])->name('tragaperras.apuesta');
+Route::post('tragaperras/recompensa', [TragaperrasController::class, 'recompensa'])->name('tragaperras.recompensa');
 
 Route::get('cajero', [CajeroController::class, 'show'])->name('cajero');
 Route::post('cajero', [CajeroController::class, 'store'])->name('cajero.store');

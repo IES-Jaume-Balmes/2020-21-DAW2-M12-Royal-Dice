@@ -102,7 +102,7 @@ async function jugar() {
     console.log(respo.sepuede);
     if (!respo.sepuede) {
         nofichas = document.createElement("p");
-        nofichas.innerHTML = "Compra fichas para seguir jugando";
+        nofichas.innerHTML = 'Compra fichas para seguir jugando <br><a href="cajero">Ir al cajero</a>';
         juego.appendChild(nofichas);
         return;
     }

@@ -30,7 +30,7 @@
             opacity: 1;
         }
     </style>
-    <link rel="stylesheet" href="{{ asset('css/paginaprincipal') }}">
+    <link rel="stylesheet" href="{{ asset('css/paginaprincipal.css') }}">
 </head>
 <body>
     @include('layouts/header')

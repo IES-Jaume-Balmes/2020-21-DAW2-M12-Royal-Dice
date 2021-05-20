@@ -62,7 +62,7 @@ function probabilidades() {
 }
 
 
-function jugar() {
+async function jugar() {
     document.getElementById("inicio").style.display = "none";
     document.getElementById("apuesta").style.display = "none";
     if (document.contains(document.getElementById("maquina"))) {
@@ -72,6 +72,27 @@ function jugar() {
 
     //COMPROVAR SI APUESTA ES CORRECTA
     apuesta = parseInt(document.getElementById("apuesta").value);
+    csrf = document.querySelector('meta[name="csrf-token"]').content;
+    var resp = await fetch('tragaperras/apuesta', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrf
+
+        },
+        body: JSON.stringify({ apuesta: apuesta })
+    });
+    //console.log(await resp.json());
+    respo = await resp.json();
+    console.log(respo.sepuede);
+    if (!respo.sepuede) {
+        nofichas = document.createElement("p");
+        nofichas.innerHTML = 'Compra fichas para seguir jugando <br><a href="cajero">Ir al cajero</a>';
+
+        juego.appendChild(nofichas);
+        return;
+    }
 
     if (document.contains(document.getElementById("apuestaMal"))) {
         document.getElementById("apuestaMal").remove();
@@ -127,7 +148,7 @@ function jugar() {
 
 }
 
-function parar() {
+async function parar() {
     document.getElementById("parar").remove();
     results = [];
     for (let i = 0; i < 3; i++) {
@@ -153,6 +174,19 @@ function parar() {
     cont++;
     if (ganancias != 0) {
         balance += ganancias
+
+    } else {
+        var resp = await fetch('tragaperras/recompensa', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrf
+
+            },
+            body: JSON.stringify({ apuesta: ganancias })
+        });
+        console.log(await resp.json());
     }
 
     div = document.getElementById("partidaAnterior");
