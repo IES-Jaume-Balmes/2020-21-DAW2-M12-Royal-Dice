@@ -30,18 +30,23 @@ class TragaperrasController extends Controller
         ]);
     }
     public function recompensa(Request $request){
-        $params = $request->only('apuesta');
-        $apuesta = $params['apuesta'];
+        if($request == true){
+        $params = $request->only('ganancias');
+        $apuesta = $params['ganancias'];
+        
         $user = Auth::user();
 
         $dbUser = User::find($user->id);
         
-        $dbUser->fichas += $apuesta*2;
+        $dbUser->fichas += $apuesta;
         $dbUser->save();
 
         return response()->json([
             'anadido' => true
-
+        ]);
+        }
+        return response()->json([
+            'anadido' => false
         ]);
     }
 }

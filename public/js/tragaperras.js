@@ -10,6 +10,15 @@ input.id = "apuesta"
 input.value = 10;
 juego.appendChild(input);
 
+
+//CREAR INPUT PARA INTRODUCIR GANANCIA
+input = document.createElement("input");
+input.setAttribute("type", "number");
+input.id = "ganancias";
+input.value = 0;
+input.style.display = "none";
+juego.appendChild(input);
+
 //CREAR BOTON PARA EMPEZAR JUEGO
 buton = document.createElement("button");
 buton.setAttribute("onclick", "jugar()")
@@ -169,25 +178,26 @@ async function parar() {
         ganancias += parseInt(results[i].valor) * apuesta;
     }
     //console.log(ganancias);
-
+    document.getElementById("ganancias").value = ganancias;
+    console.log(ganancias);
     balance -= apuesta;
     cont++;
     if (ganancias != 0) {
         balance += ganancias
 
-    } else {
-        var resp = await fetch('tragaperras/recompensa', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': csrf
-
-            },
-            body: JSON.stringify({ apuesta: ganancias })
-        });
-        console.log(await resp.json());
     }
+    csrf = document.querySelector('meta[name="csrf-token"]').content;
+    var resp = await fetch('tragaperras/recompensa', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrf
+
+        },
+        body: JSON.stringify({ ganancias: ganancias })
+    });
+    console.log(await resp.json());
 
     div = document.getElementById("partidaAnterior");
     div.style.display = "";
