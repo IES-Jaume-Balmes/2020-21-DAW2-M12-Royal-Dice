@@ -4,6 +4,32 @@
 <head>
     @include('layouts/head')
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+        #juego{
+            text-align: center;
+        }
+        #apuesta,button{
+            background-color: #B19D60;
+            /* height: 30px;
+            margin-left: 10px;
+            margin-top: 10px; */
+            border-radius: 12px;
+            border: 1.5px solid rgba(0, 0, 0, 0.801);
+        }
+        button:active {
+            background-color: #B19D60;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        #result{
+            font-weight: bold;
+            color: white;
+        }
+        ::placeholder {
+            color: black;
+            opacity: 1;
+        }
+    </style>
     <link rel="stylesheet" href="{{ asset('css/paginaprincipal.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
