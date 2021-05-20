@@ -36,13 +36,13 @@
                     </p>
                     <br>
                     <h4>✖ MULTIPLICADORES ✖</h4>
-                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/caquita.png') }}" alt=""> = X (3%) {Pierdes la apuesta}</p>
-                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/limon.png') }}" alt=""> = 0 (58%)</p>
-                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/platano.png') }}" alt=""> = 0.5 (16%)</p>
-                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/naranja.png') }}" alt=""> = 1 (9%)</p>
-                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/sandia.png') }}" alt=""> = 1.5 (7%)</p> 
-                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/siete.png') }}" alt=""> = 2 (5%)</p>
-                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/diamante.png') }}" alt=""> = 5 (2%)</p>   
+                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/caquita.png') }}" alt=""> = X (6%) {Pierdes la apuesta}</p>
+                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/limon.png') }}" alt=""> x0 (58%)</p>
+                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/platano.png') }}" alt=""> x0.5 (16%)</p>
+                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/naranja.png') }}" alt=""> x1 (9%)</p>
+                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/sandia.png') }}" alt=""> x1.5 (7%)</p> 
+                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/siete.png') }}" alt=""> x2 (3%)</p>
+                    <p><img style="width: 50px" src="{{ asset('img/tragaperras/diamante.png') }}" alt=""> x5 (1%)</p>   
                 </div>
             </div>
         </div>
