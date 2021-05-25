@@ -176,7 +176,6 @@ async function parar() {
             break;
         }
         ganancias += parseFloat(results[i].valor) * apuesta;
-        //console.log((results[i].valor)
     }
     //console.log(ganancias);
     document.getElementById("ganancias").value = ganancias;
