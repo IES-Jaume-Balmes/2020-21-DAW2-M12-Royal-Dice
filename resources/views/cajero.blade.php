@@ -39,7 +39,8 @@
         @csrf    
         <h3>introduce la cantidad de fichas que deseas comprar</h3>
         <p>Tienes {{ $fichas }} fichas</p>
-        <input type="text" name="ficha" id="fichas">
+        <label for="quantity">Cuantas fichas deseas añadir?</label>
+        <input name="ficha" id="fichas" type="number" name="quantity" min="1" max="1000000000">
         <div class="informacion">
             <h4>1 FICHA = 1 €</h4>
         </div>

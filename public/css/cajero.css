@@ -31,10 +31,9 @@ body {
     color: #171717;
     font-weight: bolder;
     margin: 2px;
-    
 }
 
-.box input[type="text"],
+.box input,
 .box input[type="password"] {
     border: 0;
     background: #b19246;
@@ -50,7 +49,7 @@ body {
     transition: 0.25s;
 }
 
-.box input[type="text"]:focus,
+.box input:focus,
 .box input[type="password"]:focus {
     width: 450px;
     border-color: white;
@@ -91,11 +90,13 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
 a {
     text-decoration: none;
     color: white;
 }
-.informacion{
+
+.informacion {
     background: #b19246;
     width: 200px;
     height: 29px;
@@ -103,25 +104,31 @@ a {
     margin-top: 10px;
     border-radius: 24px;
 }
-h4{
+
+h4 {
     padding-top: 5px;
     font-weight: bold;
     text-transform: uppercase;
 }
-.tarjeta{
+
+.tarjeta {
     display: inline-flex;
 }
-.codigo{
+
+.codigo {
     width: 100px;
 }
-#textcod{
+
+#textcod {
     text-decoration: yellowgreen;
     padding: 0%;
 }
-#codigo{
+
+#codigo {
     width: 100px;
 }
-select{
+
+select {
     width: 100px;
     height: 37px;
     font-size: 18px;
