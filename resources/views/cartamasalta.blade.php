@@ -47,7 +47,8 @@
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-                El crupier lanza una carta de la parte superior de la baraja. El jugador debe adivinar si la siguiente carta que se voltea va a ser más alta o más baja. Adivina correctamente y dobla tu apuesta.
+                El crupier lanza una carta de la parte superior de la baraja. El jugador debe adivinar si la carta que tiene va a ser más alta o más baja que la siguiente.  
+                <p>Adivina correctamente y dobla tu apuesta.</p>
             </div>
         </div>
     </div>
