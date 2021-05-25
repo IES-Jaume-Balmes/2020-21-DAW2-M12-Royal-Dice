@@ -205,6 +205,7 @@ async function parar() {
 
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
+    refresh_user_data();
 
 
 }

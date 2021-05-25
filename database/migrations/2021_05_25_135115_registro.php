@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Historial extends Migration
+class Registro extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class Historial extends Migration
      */
     public function up()
     {
-        Schema::create('historial', function (Blueprint $table) {
+        Schema::create('registro', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('juego')->references('id')->on('juegos');
+            $table->string('juego');
             $table->integer('apuesta');
             $table->foreignId('usuario')->references('id')->on('users');
             $table->integer('beneficioperdida');
@@ -30,6 +30,7 @@ class Historial extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('historial');
+        Schema::dropIfExists('registro');
+        
     }
 }

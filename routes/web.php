@@ -50,6 +50,7 @@ Route::post('blackjack/recompensa', [BlackjackController::class, 'recompensa'])-
 Route::get('cartamasalta', [CartaMasAltaController::class, 'show'])->name('cartamasalta');
 Route::post('cartamasalta/apuesta', [CartaMasAltaController::class, 'apuesta'])->name('cartamasalta.apuesta');
 Route::post('cartamasalta/recompensa', [CartaMasAltaController::class, 'recompensa'])->name('cartamasalta.recompensa');
+Route::post('cartamasalta/refresh', [CartaMasAltaController::class, 'refresh_user_data'])->name('cartamasalta.refresh');
 
 Route::get('tragaperras', [TragaperrasController::class, 'show'])->name('tragaperras');
 Route::post('tragaperras/apuesta', [TragaperrasController::class, 'apuesta'])->name('tragaperras.apuesta');

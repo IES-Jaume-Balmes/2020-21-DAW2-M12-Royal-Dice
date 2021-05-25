@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Registro;
 
 class CartaMasAltaController extends Controller
 {
@@ -43,6 +44,13 @@ class CartaMasAltaController extends Controller
         return response()->json([
             'anadido' => true
 
+        ]);
+    }
+    public function refresh_user_data(Request $request){
+        $user = Auth::user();
+        $dbUser = User::find($user->id);
+        return response()->json([
+            'fichas' => $dbUser->fichas
         ]);
     }
 }
