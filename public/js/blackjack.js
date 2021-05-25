@@ -327,6 +327,7 @@ async function resolucion_partida() {
     }
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
+    refresh_user_data();
 }
 ////NO USADO
 function wait(ms) {

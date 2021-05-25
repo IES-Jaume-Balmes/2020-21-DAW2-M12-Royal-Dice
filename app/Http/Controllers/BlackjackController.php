@@ -35,7 +35,7 @@ class BlackjackController extends Controller
         $apuesta = $params['apuesta'];
         $user = Auth::user();
         $dbUser = User::find($user->id);
-        $registro = Auth::Registro();
+        //$registro = Auth::Registro();
 
         // $dbpartida = Registro::insert($registro->id);
 
