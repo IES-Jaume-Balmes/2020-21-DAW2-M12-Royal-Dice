@@ -181,6 +181,7 @@ async function resolucion_partida(resultado) {
     console.log(registro_partidas);
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
+    refresh_user_data();
 }
 
 function valor_carta(carta) {

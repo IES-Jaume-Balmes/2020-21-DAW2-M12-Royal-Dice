@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Registro;
 
 class BlackjackController extends Controller
 {
@@ -33,9 +34,11 @@ class BlackjackController extends Controller
         $params = $request->only('apuesta');
         $apuesta = $params['apuesta'];
         $user = Auth::user();
-
         $dbUser = User::find($user->id);
-        
+        $registro = Auth::Registro();
+
+        // $dbpartida = Registro::insert($registro->id);
+
         $dbUser->fichas += $apuesta*2;
         $dbUser->save();
 
@@ -43,6 +46,5 @@ class BlackjackController extends Controller
             'anadido' => true
 
         ]);
-    }
-    
+    }  
 }
