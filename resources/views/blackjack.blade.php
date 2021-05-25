@@ -50,13 +50,17 @@
     <div class="instrucciones accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Instrucciones ❓
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="
+            margin-top: 0px; margin-left: 0px;">
+
+                        Instrucciones ❓
+
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-                El objetivo es simple: ganarle al Croupier obteniendo el puntaje más cercano a 21. Las figuras (el Valet, la Reina y el Rey) valen 10, el As vale 11 o 1 y todas las otras cartas conservan su valor. El Black Jack se produce cuando las dos (2) primeras cartas son un diez o cualquier figura más un As.
+                 <p>El objetivo es simple: ganarle al Croupier obteniendo el puntaje más cercano a 21.</p> <p>Las figuras (el Valet, la Reina y el Rey) valen 10, el As vale 11 o 1 y todas las otras cartas conservan su valor.</p>
+                  El Black Jack se produce cuando las dos (2) primeras cartas son un diez o cualquier figura más un As.
             </div>
         </div>
     </div>

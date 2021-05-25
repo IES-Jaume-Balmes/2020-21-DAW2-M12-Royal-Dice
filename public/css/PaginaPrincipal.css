@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+    /*
+     Tamaño original pantalla
+           1386 x 896
+    */
+
+
+
+@media only screen and (min-width: 768px) { 
+    
+    .longlogo{
+        /*NO SE CAMBIA EL TAMAÑO DEL LOGO*/
+    }
+  }
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
-
 
 /* MENÚ */
 
@@ -343,6 +357,8 @@ a:hover {
     margin-top: 20px;
     margin-left: 45px;
     margin-right: 50px;
+    
+    
 }
 
 .accordion-button {
