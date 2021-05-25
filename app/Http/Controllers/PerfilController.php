@@ -12,8 +12,8 @@ class PerfilController extends Controller
         return view('perfil');
     }
     public function store(Request $request){
-        $params = $request->only('newpassword');
         $user = Auth::user();
+        $params = $request->only('newpassword');
 
         $dbUser = User::find($user->id);
 
