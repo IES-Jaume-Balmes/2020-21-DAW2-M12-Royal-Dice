@@ -49,7 +49,6 @@ class BlackjackController extends Controller
     }
     public function registro_partida(Request $request){
         $registro = new Registro();
-        $dbpartida = Registro::find($registro->id);
         $registro->juego = 'blackjack';
 
         $params = $request;
@@ -58,6 +57,6 @@ class BlackjackController extends Controller
         $registro->usuario = Auth::user()->id;
         
         $registro->beneficioperdida = $params['beneficioperdida'];
-        $registro->save();
+        // $registro->save();
     }
 }
