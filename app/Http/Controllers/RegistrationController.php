@@ -16,7 +16,7 @@ class RegistrationController extends Controller
     public function store(Request $request){
 
         $usuario = new User();
-
+        
         $usuario->name = $request->name;
         $usuario->email = $request->email;
         $usuario->fichas = 100;

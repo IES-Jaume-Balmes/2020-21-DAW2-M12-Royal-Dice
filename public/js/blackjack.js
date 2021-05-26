@@ -307,8 +307,10 @@ async function resolucion_partida() {
     document.getElementById("suma_croupier").innerHTML = suma_croupier;
     document.getElementById("oculta").firstChild.style.visibility = "";
     document.getElementById("oculta").style.backgroundImage = "";
+    var beneficioperdida = 0;
     if (suma_user > suma_croupier && suma_user <= 21 || suma_croupier > 21) {
         ////console.log("GANA USER")
+        beneficioperdida = apuesta * 2;
         document.getElementById("result").innerHTML = "Gana User";
         var resp = await fetch('blackjack/recompensa', {
             method: 'POST',
@@ -323,11 +325,25 @@ async function resolucion_partida() {
         console.log(await resp.json());
     } else {
         ////console.log("GANA LA COUPIER");
+        beneficioperdida = -apuesta;
+
         document.getElementById("result").innerHTML = "Gana Croupier";
     }
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
     refresh_user_data();
+
+    var resp = await fetch('blackjack/recompensa', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrf
+
+        },
+        body: JSON.stringify({ apuesta: apuesta, beneficioperdida: beneficioperdida })
+    });
+    console.log(await resp.json());
 }
 ////NO USADO
 function wait(ms) {

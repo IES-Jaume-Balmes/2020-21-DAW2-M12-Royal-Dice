@@ -11,7 +11,7 @@ use Illuminate\Notifications\Notifiable;
 
 class Registro extends Model
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.

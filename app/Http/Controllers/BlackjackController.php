@@ -46,5 +46,18 @@ class BlackjackController extends Controller
             'anadido' => true
 
         ]);
-    }  
+    }
+    public function registro_partida(Request $request){
+        $registro = new Registro();
+        $dbpartida = Registro::find($registro->id);
+        $registro->juego = 'blackjack';
+
+        $params = $request;
+        $apuesta = $params['apuesta'];
+        $registro->apuesta = $apuesta;
+        $registro->usuario = Auth::user()->id;
+        
+        $registro->beneficioperdida = $params['beneficioperdida'];
+        $registro->save();
+    }
 }
