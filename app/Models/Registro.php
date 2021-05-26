@@ -19,7 +19,6 @@ class Registro extends Model
      * @var array
      */
     protected $fillable = [
-        'id',
         'juego',
         'apuesta',
         'usuario',

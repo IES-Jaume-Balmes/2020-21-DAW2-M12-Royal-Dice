@@ -206,7 +206,22 @@ async function parar() {
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
     refresh_user_data();
-
+    var beneficioperdida = 0;
+    if (ganancias <= apuesta) {
+        beneficioperdida = ganancias - apuesta;
+    } else {
+        beneficioperdida = ganancias;
+    }
+    var resp = await fetch('tragaperras/registro', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrf
+        },
+        body: JSON.stringify({ apuesta: apuesta, beneficioperdida: beneficioperdida })
+    });
+    console.log(await resp.json());
 
 }
 

@@ -159,7 +159,9 @@ async function resolucion_partida(resultado) {
 
     mostrar_carta(cartas[1]);
     p = document.getElementById("result");
+    var beneficioperdida = 0;
     if (resultado) {
+        beneficioperdida = apuesta * 2;
         p.innerHTML = "Has ganado";
         registro_partidas.push("W");
         var resp = await fetch('cartamasalta/recompensa', {
@@ -176,12 +178,25 @@ async function resolucion_partida(resultado) {
     } else {
         p.innerHTML = "Has perdido";
         registro_partidas.push("L");
+        beneficioperdida -= apuesta;
+
     }
 
     console.log(registro_partidas);
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
     refresh_user_data();
+
+    var resp = await fetch('cartamasalta/registro', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrf
+        },
+        body: JSON.stringify({ apuesta: apuesta, beneficioperdida: beneficioperdida })
+    });
+    console.log(await resp.json());
 }
 
 function valor_carta(carta) {

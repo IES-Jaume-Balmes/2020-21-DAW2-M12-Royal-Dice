@@ -333,17 +333,17 @@ async function resolucion_partida() {
     document.getElementById("apuesta").style.display = "";
     refresh_user_data();
 
-    var resp = await fetch('blackjack/recompensa', {
+    var resp = await fetch('blackjack/registro', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
             'X-CSRF-TOKEN': csrf
-
         },
         body: JSON.stringify({ apuesta: apuesta, beneficioperdida: beneficioperdida })
     });
     console.log(await resp.json());
+
 }
 ////NO USADO
 function wait(ms) {

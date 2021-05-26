@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Registro;
 use Illuminate\Support\Facades\Auth;
 
 class TragaperrasController extends Controller
@@ -47,6 +48,21 @@ class TragaperrasController extends Controller
         }
         return response()->json([
             'anadido' => false
+        ]);
+    }
+    public function registro_partida(Request $request){
+        $registro = new Registro();
+        $registro->juego = 'Tragaperras';
+
+        $params = $request;
+        $apuesta = $params['apuesta'];
+        $registro->apuesta = $apuesta;
+        $registro->usuario = Auth::user()->id;
+        
+        $registro->beneficioperdida = $params['beneficioperdida'];
+        $registro->save();
+        return response()->json([
+            'registrado' => true
         ]);
     }
 }

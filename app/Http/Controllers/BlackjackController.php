@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Registro;
 use Illuminate\Support\Facades\Auth;
-use Registro;
 
 class BlackjackController extends Controller
 {
@@ -57,6 +57,9 @@ class BlackjackController extends Controller
         $registro->usuario = Auth::user()->id;
         
         $registro->beneficioperdida = $params['beneficioperdida'];
-        // $registro->save();
+        $registro->save();
+        return response()->json([
+            'registrado' => true
+        ]);
     }
 }
