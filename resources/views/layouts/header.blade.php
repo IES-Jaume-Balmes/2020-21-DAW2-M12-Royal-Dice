@@ -45,3 +45,4 @@
             <a href="{{ asset('logout') }}"><img class="exit" src="{{ asset('img/exit.png') }}" alt="Cerrar Sesión"></a>
 
     </div>
+    <script>fichas_user={{ Auth::user()->fichas }};</script>

@@ -14,6 +14,13 @@ buton.appendChild(document.createTextNode("Jugar"));
 buton.id = "inicio";
 juego.appendChild(buton);
 
+//CREAR BOTON PARA HACER UN ALL IN (APOSTAR TODAS LAS FICHAS)
+buton = document.createElement("button");
+buton.setAttribute("onclick", "allIn()")
+buton.appendChild(document.createTextNode("All In"));
+buton.id = "allIn";
+juego.appendChild(buton);
+
 //CREAR PARTE ZONA DE RESULTADO
 div = document.createElement("div");
 div.id = "result";
@@ -62,7 +69,9 @@ div = document.createElement("div");
 div.id = "div1";
 juego.appendChild(div);
 
-
+function allIn() {
+    document.getElementById("apuesta").value = fichas_user;
+}
 
 function inicializar() {
     document.getElementById("result").innerHTML = "";
@@ -77,8 +86,9 @@ function inicializar() {
 }
 
 async function jugar() {
-    document.getElementById("apuesta").style.display = "none";
     document.getElementById("inicio").style.display = "none";
+    document.getElementById("apuesta").style.display = "none";
+    document.getElementById("allIn").style.display = "none";
     //MEZCAMOS CARTAS------------------------------------------------------------------------------------------
     cartas = inicializar();
     shuffle(cartas);
@@ -307,8 +317,10 @@ async function resolucion_partida() {
     document.getElementById("suma_croupier").innerHTML = suma_croupier;
     document.getElementById("oculta").firstChild.style.visibility = "";
     document.getElementById("oculta").style.backgroundImage = "";
+    var beneficioperdida = 0;
     if (suma_user > suma_croupier && suma_user <= 21 || suma_croupier > 21) {
         ////console.log("GANA USER")
+        beneficioperdida = apuesta * 2;
         document.getElementById("result").innerHTML = "Gana User";
         var resp = await fetch('blackjack/recompensa', {
             method: 'POST',
@@ -323,11 +335,26 @@ async function resolucion_partida() {
         console.log(await resp.json());
     } else {
         ////console.log("GANA LA COUPIER");
+        beneficioperdida = -apuesta;
+
         document.getElementById("result").innerHTML = "Gana Croupier";
     }
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
+    document.getElementById("allIn").style.display = "";
     refresh_user_data();
+
+    var resp = await fetch('blackjack/registro', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrf
+        },
+        body: JSON.stringify({ apuesta: apuesta, beneficioperdida: beneficioperdida })
+    });
+    console.log(await resp.json());
+
 }
 ////NO USADO
 function wait(ms) {
