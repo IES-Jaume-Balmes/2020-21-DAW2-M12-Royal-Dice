@@ -4,136 +4,275 @@
     zoom: 97.2%;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: #171717;
+@media (min-width:768) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #171717;
+    }
+    
+    .box {
+        width: 500px;
+        padding-top: 18px;
+        padding-bottom: 17px;
+        padding-left: 27px;
+        padding-right: 27px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #917839;
+        text-align: center;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .box h3 {
+        text-transform: uppercase;
+        font-size: 21px;
+        color: #171717;
+        font-weight: bolder;
+        margin: 2px;
+    }
+    
+    .box input,
+    .box input[type="password"] {
+        border: 0;
+        background: #b19246;
+        margin-top: 8px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 14px 0px;
+        width: 300px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        font-size: 15px;
+        transition: 0.25s;
+    }
+    
+    .box input:focus,
+    .box input[type="password"]:focus {
+        width: 450px;
+        border-color: white;
+    }
+    
+    .box input[type="submit"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+        border: 2px solid white;
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    
+    .box input[type="submit"]:hover {
+        background: rgb(255, 255, 255);
+        color: #c49d3c;
+        opacity: 0.6;
+    }
+    
+    ::placeholder {
+        color: white;
+        opacity: 0.5;
+    }
+    
+    #cajero {
+        padding-top: 15px;
+        padding-bottom: 10px;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .informacion {
+        background: #b19246;
+        width: 200px;
+        height: 29px;
+        margin-left: 158px;
+        margin-top: 10px;
+        border-radius: 24px;
+    }
+    
+    h4 {
+        padding-top: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .tarjeta {
+        display: inline-flex;
+    }
+    
+    .codigo {
+        width: 100px;
+    }
+    
+    #textcod {
+        text-decoration: yellowgreen;
+        padding: 0%;
+    }
+    
+    #codigo {
+        width: 100px;
+    }
+    
+    select {
+        width: 100px;
+        height: 37px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #B19246;
+        border-color: #171717;
+        border-radius: 24px;
+    }
 }
 
-.box {
-    width: 500px;
-    padding-top: 18px;
-    padding-bottom: 17px;
-    padding-left: 27px;
-    padding-right: 27px;
-    margin-left: auto;
-    margin-right: auto;
-    background: #917839;
-    text-align: center;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.box h3 {
-    text-transform: uppercase;
-    font-size: 21px;
-    color: #171717;
-    font-weight: bolder;
-    margin: 2px;
-}
-
-.box input,
-.box input[type="password"] {
-    border: 0;
-    background: #b19246;
-    margin-top: 8px;
-    text-align: center;
-    border: 1px solid black;
-    padding: 14px 0px;
-    width: 300px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    font-size: 15px;
-    transition: 0.25s;
-}
-
-.box input:focus,
-.box input[type="password"]:focus {
-    width: 450px;
-    border-color: white;
-}
-
-.box input[type="submit"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 10px auto;
-    text-align: center;
-    border: 2px solid white;
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.box input[type="submit"]:hover {
-    background: rgb(255, 255, 255);
-    color: #c49d3c;
-    opacity: 0.6;
-}
-
-::placeholder {
-    color: white;
-    opacity: 0.5;
-}
-
-#cajero {
-    padding-top: 15px;
-    padding-bottom: 10px;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.informacion {
-    background: #b19246;
-    width: 200px;
-    height: 29px;
-    margin-left: 158px;
-    margin-top: 10px;
-    border-radius: 24px;
-}
-
-h4 {
-    padding-top: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.tarjeta {
-    display: inline-flex;
-}
-
-.codigo {
-    width: 100px;
-}
-
-#textcod {
-    text-decoration: yellowgreen;
-    padding: 0%;
-}
-
-#codigo {
-    width: 100px;
-}
-
-select {
-    width: 100px;
-    height: 37px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #B19246;
-    border-color: #171717;
-    border-radius: 24px;
+@media (min-width:375) {
+    body {
+        
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #171717;
+    }
+    
+    .box {
+        width: 500px;
+        padding-top: 18px;
+        padding-bottom: 17px;
+        padding-left: 27px;
+        padding-right: 27px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #917839;
+        text-align: center;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .box h3 {
+        text-transform: uppercase;
+        font-size: 21px;
+        color: #171717;
+        font-weight: bolder;
+        margin: 2px;
+    }
+    
+    .box input,
+    .box input[type="password"] {
+        border: 0;
+        background: #b19246;
+        margin-top: 8px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 14px 0px;
+        width: 300px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        font-size: 15px;
+        transition: 0.25s;
+    }
+    
+    .box input:focus,
+    .box input[type="password"]:focus {
+        width: 450px;
+        border-color: white;
+    }
+    
+    .box input[type="submit"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+        border: 2px solid white;
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    
+    .box input[type="submit"]:hover {
+        background: rgb(255, 255, 255);
+        color: #c49d3c;
+        opacity: 0.6;
+    }
+    
+    ::placeholder {
+        color: white;
+        opacity: 0.5;
+    }
+    
+    #cajero {
+        padding-top: 15px;
+        padding-bottom: 10px;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .informacion {
+        background: #b19246;
+        width: 200px;
+        height: 29px;
+        margin-left: 158px;
+        margin-top: 10px;
+        border-radius: 24px;
+    }
+    
+    h4 {
+        padding-top: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .tarjeta {
+        display: inline-flex;
+    }
+    
+    .codigo {
+        width: 100px;
+    }
+    
+    #textcod {
+        text-decoration: yellowgreen;
+        padding: 0%;
+    }
+    
+    #codigo {
+        width: 100px;
+    }
+    
+    select {
+        width: 100px;
+        height: 37px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #B19246;
+        border-color: #171717;
+        border-radius: 24px;
+    }
 }
