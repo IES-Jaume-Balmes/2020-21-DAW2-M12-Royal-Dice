@@ -12,4 +12,5 @@ async function refresh_user_data() {
     });
     store = await resp.json();
     document.getElementById('fichas').innerHTML = store.fichas + " FICHAS";
+    fichas_user = store.fichas;
 }
