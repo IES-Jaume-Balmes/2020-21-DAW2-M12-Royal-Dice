@@ -33,6 +33,13 @@ buton.appendChild(document.createTextNode("All In"));
 buton.id = "allIn";
 juego.appendChild(buton);
 
+//CREAR BOTON PARA HACER UN HALF IN (APOSTAR LA MITAD DE LAS FICHAS)
+buton = document.createElement("button");
+buton.setAttribute("onclick", "halfIn()")
+buton.appendChild(document.createTextNode("Half In"));
+buton.id = "allIn";
+juego.appendChild(buton);
+
 //CREAR RESULTADO PARTIDA ANTERIOR
 div = document.createElement("div");
 div.style.display = "none";
@@ -46,6 +53,11 @@ console.log(opciones)
 function allIn() {
     document.getElementById("apuesta").value = fichas_user;
 }
+
+function halfIn() {
+    document.getElementById("apuesta").value = fichas_user / 2;
+}
+
 
 function probabilidades() {
     s = "";
