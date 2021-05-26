@@ -49,6 +49,13 @@
             <div class="accordion-body">
                 El crupier lanza una carta de la parte superior de la baraja. El jugador debe adivinar si la carta que tiene va a ser más alta o más baja que la siguiente.  
                 <p>Adivina correctamente y dobla tu apuesta.</p>
+                <p>El valor de las cartas es:</p>
+                <ul>
+                    <li>As -> 1</li>
+                    <li>Jota -> 11</li>
+                    <li>Dama -> 12</li>
+                    <li>Rey -> 13</li>
+                </ul>
             </div>
         </div>
     </div>

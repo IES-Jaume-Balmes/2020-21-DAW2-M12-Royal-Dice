@@ -26,6 +26,13 @@ buton.appendChild(document.createTextNode("Jugar"));
 buton.id = "inicio";
 juego.appendChild(buton);
 
+//CREAR BOTON PARA HACER UN ALL IN (APOSTAR TODAS LAS FICHAS)
+buton = document.createElement("button");
+buton.setAttribute("onclick", "allIn()")
+buton.appendChild(document.createTextNode("All In"));
+buton.id = "allIn";
+juego.appendChild(buton);
+
 //CREAR RESULTADO PARTIDA ANTERIOR
 div = document.createElement("div");
 div.style.display = "none";
@@ -35,6 +42,10 @@ juego.appendChild(div);
 
 var opciones = JSON.parse('{ "opciones": [{"nombre": "Diamante", "valor": "5", "img": "img/tragaperras/diamante.png" },{ "nombre": "Limon", "valor": "0", "img": "img/tragaperras/limon.png" }, { "nombre": "Naranja", "valor": "1", "img": "img/tragaperras/naranja.png" }, { "nombre": "Platano", "valor": "0.5", "img": "img/tragaperras/platano.png" }, { "nombre": "Sandia", "valor": "1.5", "img": "img/tragaperras/sandia.png" }, { "nombre": "Caquita", "valor": "0", "img": "img/tragaperras/caquita.png" }, { "nombre": "Siete", "valor": "2", "img": "img/tragaperras/siete.png" }]}');
 console.log(opciones)
+
+function allIn() {
+    document.getElementById("apuesta").value = fichas_user;
+}
 
 function probabilidades() {
     s = "";
@@ -74,6 +85,7 @@ function probabilidades() {
 async function jugar() {
     document.getElementById("inicio").style.display = "none";
     document.getElementById("apuesta").style.display = "none";
+    document.getElementById("allIn").style.display = "none";
     if (document.contains(document.getElementById("maquina"))) {
         document.getElementById("maquina").remove();
     }
@@ -114,6 +126,7 @@ async function jugar() {
         juego.appendChild(p);
         document.getElementById("inicio").style.display = "";
         document.getElementById("apuesta").style.display = "";
+        document.getElementById("allIn").style.display = "";
         return;
     }
 
@@ -205,6 +218,7 @@ async function parar() {
 
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
+    document.getElementById("allIn").style.display = "";
     refresh_user_data();
 
 
