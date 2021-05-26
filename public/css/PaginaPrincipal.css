@@ -9,7 +9,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-@media only screen and (min-width: 768px){
+@media (min-width: 768px){
     /* Para Portatiles */
 
 /* MENÚ */
@@ -33,7 +33,7 @@ body:before {
     position: fixed;
     top: 0;
     right: 0;
-    width: auto;
+    width: auto;    
 }
 
 .menusvg {
@@ -373,7 +373,7 @@ a:hover {
 
         /*   TELEFONO   */
 
-@media (min-width: 375px) { 
+@media (min-width: 375px) and (max-width: 767) { 
     
 html,
 body {
@@ -389,12 +389,12 @@ body:before {
     background: #171717;
     bottom: 0;
     content: '';
-    height: 679px;
+    height: 680px;
     left: 0;
     position: fixed;
     top: 0;
     right: 0;
-    width: auto;
+    width: 375px;
 }
 
 .menusvg {
