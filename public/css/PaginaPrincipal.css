@@ -8,13 +8,9 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }
-
-
-
         /*   TELEFONO   */
 
-@media (min-width: 375px) { 
-    
+@media (min-width: 375px) and (max-width:767px) {    
 html,
 body {
     padding-top: 0%;
@@ -34,7 +30,7 @@ body:before {
     position: fixed;
     top: 0;
     right: 0;
-    width: 375px;
+    width: auto;
 }
 
 .menusvg {
@@ -322,7 +318,7 @@ a:hover {
     position: relative;
     float: right;
     margin-top: 40px;
-    margin-right: 38.5px;
+    margin-right: 58.5px;
 }
 
 .info-perfil a {
@@ -498,16 +494,18 @@ a:hover {
     width: 44px;
 }
 
-.menu__toggle-label svg {
+    /* ANIMACION DESAPARECER SVG */
+
+/* .menu__toggle-label svg {
     left: 0;
     position: absolute;
     top: 0;
     transition: transform 0.15s;
     z-index: 2;
-}
+} */
 
 .menu__toggle-label svg:nth-of-type(2) {
-    left: 250px;
+    left: 120px;
     transform: scale(0);
 }
 
@@ -520,12 +518,11 @@ a:hover {
     background: #171717;
     left: 0;
     position: fixed;
-    top: 0;
+    top: -43px;
     transition: background 0.15s;
-    height: 90%;
+    height: 110%;
     width: 18%;
     z-index: 1;
-    margin-top: 5%;
     margin-bottom: 5%;
 }
 
@@ -534,7 +531,9 @@ a:hover {
 }
 
 .menu__toggle:checked~.menu__toggle-label svg:nth-of-type(2) {
-    left: 120px;
+    left: 140px;
+    position: sticky;
+    margin-top: 30%;
     transform: scale(1);
     transition: transform 0.15s;
     transition-delay: 0.925s;

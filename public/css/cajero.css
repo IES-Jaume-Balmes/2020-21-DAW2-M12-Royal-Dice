@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 * {
     font-family: 'Montserrat', sans-serif;
-    zoom: 97.2%;
 }
-@media (min-width: 375px) {
+@media (min-width: 375px) and (max-width:767px) {    
+    * {
+        zoom: 107.2% !important;
+    }
+
     body {
         
         margin: 0;
@@ -139,7 +143,10 @@
         border-radius: 24px;
     }
 }
-@media (min-width:768) {
+@media (min-width:768px) {
+    *{
+        zoom: normal; 
+    }
     body {
         margin: 0;
         padding: 0;
