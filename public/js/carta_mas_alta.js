@@ -49,7 +49,7 @@ function allIn() {
 }
 
 function halfIn() {
-    document.getElementById("apuesta").value = fichas_user / 2;
+    document.getElementById("apuesta").value = parseInt(fichas_user / 2);
 }
 
 function inicializar() {
