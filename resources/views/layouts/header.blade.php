@@ -25,6 +25,7 @@
                     </ol>
                 </li>
                 <li class="menu-item"><a href="{{ route('historial') }}">Historial</a></li>
+                <br><br>
                 <li class="menu-item"><a href="{{ route('logout') }}">Cerrar Sesión</a></li>
             </ol>
         </nav>

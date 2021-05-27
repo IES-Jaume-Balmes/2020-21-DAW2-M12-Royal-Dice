@@ -13,13 +13,13 @@
     <form class="box" method="post" action="{{ route('login.main') }} ">
         @csrf
         <h3>Login</h3>
-        <input type="text" name="name" placeholder="Usuario" value="{{ old('user') }}">
+        <input type="text" name="name" required placeholder="Usuario" value="{{ old('user') }}">
         @error('name')
             
             <small>*{{ $message }}</small>
             <br>
         @enderror
-        <input type="password" name="password" placeholder="Contraseña">
+        <input type="password" required name="password" placeholder="Contraseña">
         @error('password')
             
             <small>*{{ $message }}</small>

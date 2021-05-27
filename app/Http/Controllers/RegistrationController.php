@@ -14,8 +14,10 @@ class RegistrationController extends Controller
         return view('register');
     }
     public function store(Request $request){
-
-        $usuario = new User();
+        if($request->name && $request->email && $request->password){
+            return view('register');
+        } else{
+            $usuario = new User();
         
         $usuario->name = $request->name;
         $usuario->email = $request->email;
@@ -26,6 +28,7 @@ class RegistrationController extends Controller
 
         $usuario->save();
         return view('login');
+        }
     }
     public function show($id){
         $usuario = User::find($id);

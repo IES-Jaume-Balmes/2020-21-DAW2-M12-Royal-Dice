@@ -13,19 +13,19 @@
     <form class="box registro" method="post" action="{{ route('register.store') }}">
         @csrf
         <h3>Registro</h3>
-        <input type="text" name="name" placeholder="Usuario" value="{{ old('user') }}">
+        <input type="text" name="name" required placeholder="Usuario" value="{{ old('user') }}">
         @error('name')
             
             <small>*{{ $message }}</small>
             <br>
         @enderror
-        <input type="text" name="email" placeholder="Email" value="{{ old('email') }}">
+        <input type="email" name="email" required placeholder="Email" value="{{ old('email') }}">
         @error('email')
             
             <small>*{{ $message }}</small>
             <br>
         @enderror
-        <input type="password" name="password" placeholder="Contraseña">
+        <input type="password" name="password" required placeholder="Contraseña">
         @error('password')
             
             <small>*{{ $message }}</small>
