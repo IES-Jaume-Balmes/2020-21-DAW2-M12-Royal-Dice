@@ -37,7 +37,7 @@ juego.appendChild(buton);
 buton = document.createElement("button");
 buton.setAttribute("onclick", "halfIn()")
 buton.appendChild(document.createTextNode("Half In"));
-buton.id = "allIn";
+buton.id = "halfIn";
 juego.appendChild(buton);
 
 //CREAR RESULTADO PARTIDA ANTERIOR
@@ -98,6 +98,7 @@ async function jugar() {
     document.getElementById("inicio").style.display = "none";
     document.getElementById("apuesta").style.display = "none";
     document.getElementById("allIn").style.display = "none";
+    document.getElementById("halfIn").style.display = "none";
     if (document.contains(document.getElementById("maquina"))) {
         document.getElementById("maquina").remove();
     }
@@ -139,6 +140,7 @@ async function jugar() {
         document.getElementById("inicio").style.display = "";
         document.getElementById("apuesta").style.display = "";
         document.getElementById("allIn").style.display = "";
+        document.getElementById("halfIn").style.display = "";
         return;
     }
 
@@ -231,6 +233,7 @@ async function parar() {
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
     document.getElementById("allIn").style.display = "";
+    document.getElementById("halfIn").style.display = "";
     refresh_user_data();
     var beneficioperdida = 0;
     if (ganancias <= apuesta) {

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+
 
 class PerfilController extends Controller
 {
@@ -17,7 +19,7 @@ class PerfilController extends Controller
 
         $dbUser = User::find($user->id);
 
-        $params['newpassword'] = $dbUser->password ;
+        $params['newpassword'] = Hash::make($dbUser->password) ;
         $dbUser->save();
        
         return view('perfil', [

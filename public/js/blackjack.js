@@ -25,7 +25,7 @@ juego.appendChild(buton);
 buton = document.createElement("button");
 buton.setAttribute("onclick", "halfIn()")
 buton.appendChild(document.createTextNode("Half In"));
-buton.id = "allIn";
+buton.id = "halfIn";
 juego.appendChild(buton);
 
 //CREAR PARTE ZONA DE RESULTADO
@@ -101,6 +101,7 @@ async function jugar() {
     document.getElementById("inicio").style.display = "none";
     document.getElementById("apuesta").style.display = "none";
     document.getElementById("allIn").style.display = "none";
+    document.getElementById("halfIn").style.display = "none";
     //MEZCAMOS CARTAS------------------------------------------------------------------------------------------
     cartas = inicializar();
     shuffle(cartas);
@@ -354,6 +355,7 @@ async function resolucion_partida() {
     document.getElementById("inicio").style.display = "";
     document.getElementById("apuesta").style.display = "";
     document.getElementById("allIn").style.display = "";
+    document.getElementById("halfIn").style.display = "";
     refresh_user_data();
 
     var resp = await fetch('blackjack/registro', {
