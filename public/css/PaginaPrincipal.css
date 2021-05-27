@@ -13,8 +13,7 @@
 
         /*   TELEFONO   */
 
-@media (min-width: 375px) { 
-    
+@media (min-width: 375px) and (max-width:767px) {    
 html,
 body {
     padding-top: 0%;
