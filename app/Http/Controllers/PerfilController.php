@@ -19,9 +19,12 @@ class PerfilController extends Controller
 
         $dbUser = User::find($user->id);
 
-        $params['newpassword'] = Hash::make($dbUser->password) ;
+        //$request->newpassword =  ;
+        
+        $dbUser->password = Hash::make($params['newpassword']);
+        
         $dbUser->save();
-       
+        
         return view('perfil', [
             'password' => $dbUser->password
         ]);

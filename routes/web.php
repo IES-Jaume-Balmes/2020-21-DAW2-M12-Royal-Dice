@@ -6,6 +6,7 @@ use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\HistorialController;
 use App\Http\Controllers\BlackjackController;
 use App\Http\Controllers\CartaMasAltaController;
 use App\Http\Controllers\CajeroController;
@@ -42,6 +43,12 @@ Route::post('login', [SessionsController::class, 'authenticate'])->name('login.m
 
 Route::get('perfil', [PerfilController::class, 'show'])->name('perfil');
 Route::post('perfil', [PerfilController::class, 'store'])->name('perfil.store');
+
+Route::get('historial', [HistorialController::class, 'show'])->name('historial');
+Route::get('historial/blackjack', [HistorialController::class, 'blackjack'])->name('historial.blackjack');
+Route::get('historial/cartamasalta', [HistorialController::class, 'cartamasalta'])->name('historial.cartamasalta');
+Route::get('historial/tragaperras', [HistorialController::class, 'tragaperras'])->name('historial.tragaperras');
+
 
 Route::get('blackjack', [BlackjackController::class, 'show'])->name('blackjack');
 Route::post('blackjack/apuesta', [BlackjackController::class, 'apuesta'])->name('blackjack.apuesta');

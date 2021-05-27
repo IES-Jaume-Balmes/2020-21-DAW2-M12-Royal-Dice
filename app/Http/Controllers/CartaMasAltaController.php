@@ -55,7 +55,7 @@ class CartaMasAltaController extends Controller
     }
     public function registro_partida(Request $request){
         $registro = new Registro();
-        $registro->juego = 'carta más alta';
+        $registro->juego = 'cartamasalta';
 
         $params = $request;
         $apuesta = $params['apuesta'];

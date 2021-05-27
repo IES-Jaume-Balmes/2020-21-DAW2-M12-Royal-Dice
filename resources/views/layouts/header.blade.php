@@ -24,14 +24,7 @@
                         <li class="menu-item"><a href="{{ route('tragaperras') }}">Tragaperras</a></li>
                     </ol>
                 </li>
-                {{-- <li class="menu-item">
-                    <a href="#0">Pruebas</a>
-                    <ol class="sub-menu">
-                        <li class="menu-item"><a href="#0">En Prueba1</a></li>
-                        <li class="menu-item"><a href="#0">En prueba2</a></li>
-                        <br>
-                    </ol>
-                </li> --}}
+                <li class="menu-item"><a href="{{ route('historial') }}">Historial</a></li>
                 <li class="menu-item"><a href="{{ route('logout') }}">Cerrar Sesión</a></li>
             </ol>
         </nav>
