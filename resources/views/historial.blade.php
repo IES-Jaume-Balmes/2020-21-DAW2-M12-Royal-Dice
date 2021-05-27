@@ -8,7 +8,7 @@
     <div class="juego">
         <div class="row" style="color: white">
             <div class="col-4">
-                <h4>Historial partidas Blackjack</h4>
+                <h4>Historial Blackjack</h4>
             {{-- Aquí van los datos de la DDBB --}}
             <ul>
             @foreach ($registros[0] as $blackjack)
@@ -17,7 +17,7 @@
             </ul>
             </div>
             <div class="col-4">
-                <h4>Historial partidas Carta Más Alta</h4>
+                <h4>Historial Carta Más Alta</h4>
             {{-- Aquí van los datos de la DDBB --}}
             <ul>
                 @foreach ($registros[1] as $cartamasalta)
@@ -26,7 +26,7 @@
                 </ul>
             </div>
             <div class="col-4">
-                <h4>Historial partidas Tragaperras</h4>
+                <h4>Historial Tragaperras</h4>
             {{-- Aquí van los datos de la DDBB --}}
             <ul>
                 @foreach ($registros[2] as $tragaperras)
