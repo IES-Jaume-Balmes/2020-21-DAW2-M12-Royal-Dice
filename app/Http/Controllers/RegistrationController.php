@@ -14,7 +14,7 @@ class RegistrationController extends Controller
         return view('register');
     }
     public function store(Request $request){
-        if($request->name && $request->email && $request->password){
+        if(!$request->name && $request->email && $request->password){
             return view('register');
         } else{
             $usuario = new User();
