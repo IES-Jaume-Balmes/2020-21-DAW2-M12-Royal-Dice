@@ -98,6 +98,7 @@ function inicializar() {
 }
 
 async function jugar() {
+
     document.getElementById("inicio").style.display = "none";
     document.getElementById("apuesta").style.display = "none";
     document.getElementById("allIn").style.display = "none";
@@ -109,6 +110,22 @@ async function jugar() {
     //POR HACER
     //RETIRAMOS APUESTA DEL CLIENTE-----------------------------------------------------------------------------
     apuesta = parseInt(document.getElementById("apuesta").value);
+
+    if (document.contains(document.getElementById("apuestaMal"))) {
+        document.getElementById("apuestaMal").remove();
+    }
+
+    if (apuesta < 1) {
+        p = document.createElement("p");
+        p.id = "apuestaMal";
+        p.innerHTML = "Apuesta invalida";
+        juego.appendChild(p);
+        document.getElementById("inicio").style.display = "";
+        document.getElementById("apuesta").style.display = "";
+        document.getElementById("allIn").style.display = "";
+        document.getElementById("halfIn").style.display = "";
+        return;
+    }
     csrf = document.querySelector('meta[name="csrf-token"]').content;
     var resp = await fetch('blackjack/apuesta', {
         method: 'POST',
