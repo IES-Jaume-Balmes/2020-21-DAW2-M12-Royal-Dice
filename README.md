@@ -4,6 +4,7 @@
 
 ### Documentación
 [GitHub Pages](https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/)
+[Presentación](https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Royal-Dice/slides-deck.html)
 
 ### Integrantes:
 Pol Balada Rigol
