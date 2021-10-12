@@ -26,7 +26,7 @@
             <br>
         @enderror
         <input type="submit" name="enviar">
-        <p>¿Eres nuevo? </p><a href="../public/register">Registrate</a>
+        <p>¿Eres nuevo? </p><a href="{{ route('register') }}">Regístrate</a>
     </form>
 
 

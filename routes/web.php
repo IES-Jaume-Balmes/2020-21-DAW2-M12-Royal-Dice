@@ -30,8 +30,8 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('register', [RegistrationController::class, 'create']);
-Route::post('register', [RegistrationController::class, 'store'])->name('register.store');
+Route::get('/register', [RegistrationController::class, 'create'])->name('register');
+Route::post('/register', [RegistrationController::class, 'store'])->name('register.store');
 
 Route::get('main', [MainController::class, 'create'])->name('main');
 
